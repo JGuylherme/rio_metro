@@ -1,7 +1,7 @@
 {
   "id": "com.guylherme.rio",
   "name": "Rio de Janeiro",
-  "description": "Grande Rio até Japeri: Censo 2022, casas OSM/Overture e batimetria GMRT. Requer serve_rio.py.",
+  "description": "Build a rail network across Greater Rio, connecting Rio de Janeiro, the Baixada Fluminense, Niterói, São Gonçalo and the wider metropolitan area.",
   "version": "2.0.0",
   "author": { "name": "guylherme" },
   "main": "index.js"

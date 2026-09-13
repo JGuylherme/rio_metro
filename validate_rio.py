@@ -101,13 +101,11 @@ def main():
     assert all(v['buildings']>100 for v in report['building_coverage_samples'].values())
     report['buildings']=json.loads((DATA/'building_audit.json').read_text())
     assert report['buildings']['visual_buildings']>317791
-    names=['config.json','demand_data.json','roads.geojson','runways_taxiways.geojson','buildings_index.bin','RIO.pmtiles','RIO_foundations.pmtiles','ocean_depth_index.json.gz']
+    from package_rio import FILES, main as package
+    names=FILES
     dist=ROOT/'dist';dist.mkdir(exist_ok=True)
     report['files']={name:{'bytes':(OUT/name).stat().st_size,'sha256':hashlib.sha256((OUT/name).read_bytes()).hexdigest()} for name in names}
-    with zipfile.ZipFile(dist/'RIO.zip.tmp','w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
-        for name in names:archive.write(OUT/name,name)
-    with zipfile.ZipFile(dist/'RIO.zip.tmp') as archive:assert archive.testzip() is None
-    (dist/'RIO.zip.tmp').replace(dist/'RIO.zip')
+    package()
     report['archive']={'path':'dist/RIO.zip','bytes':(dist/'RIO.zip').stat().st_size}
     (ROOT/'validation_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps(report,indent=2,ensure_ascii=False),flush=True)
