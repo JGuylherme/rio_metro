@@ -24,6 +24,8 @@ The resulting package is `dist/RIO.zip`. Do not run multiple map generations at 
 
 ## GitHub Release
 
+The release exporter sets each demand point's `residents` to the sum of its resident commuter groups, as required by the Registry. The current release represents 5,533,862 workers in demand; the 11,522,312 census residents remain in the source `build/RIO/demand_data.json`, census reports and `config.json` population. Non-workers are not given artificial work trips. Job totals and existing commuter routes are preserved, and unused demand anchors are omitted. Registry demand statistics therefore describe modeled workers, not the full census population.
+
 To package the existing map data and verify the ZIP's CRC integrity:
 
 ```sh

@@ -106,6 +106,13 @@ def main():
     dist=ROOT/'dist';dist.mkdir(exist_ok=True)
     report['files']={name:{'bytes':(OUT/name).stat().st_size,'sha256':hashlib.sha256((OUT/name).read_bytes()).hexdigest()} for name in names}
     package()
+    # The released demand uses commuter counts; source demand retains census totals.
+    with zipfile.ZipFile(dist/'RIO.zip') as archive:
+        payload=archive.read('demand_data.json')
+        released=json.loads(payload)
+        assert sum(p['residents'] for p in released['points'])==sum(p['size'] for p in released['pops'])==audit['commuters']
+        assert released['pops']==d['pops']
+        report['files']['demand_data.json']={'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest()}
     report['archive']={'path':'dist/RIO.zip','bytes':(dist/'RIO.zip').stat().st_size}
     (ROOT/'validation_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps(report,indent=2,ensure_ascii=False),flush=True)

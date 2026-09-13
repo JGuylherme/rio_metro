@@ -45,6 +45,8 @@ Final values are integers. The spreadsheets publish the targets, results, and ro
 
 ## Interpretation and Limitations
 
+For Registry releases, `package_rio.py` exports demand-point `residents` as the sum of the worker groups originating there. Both demand totals are therefore 5,533,862, while the census population of 11,522,312 remains in the source data, census reports and map configuration. The exported `residents` field represents modeled resident workers, not all inhabitants. Non-workers receive no invented commuting trips; job counts and worker routes are unchanged. Unused anchors with no workers or jobs are omitted from the release. Local raw-data serving/installation scripts still use the census-based source file; use the release ZIP to test the Registry export.
+
 * `employment_by_neighborhood.csv`: neighborhood-level quotas within the municipality of Rio de Janeiro; for other municipalities, the “Total no recorte municipal” (“Total within the municipal study area”) row explicitly identifies the available calibration level.
 
 * `employment_by_municipality.csv`: residents, resident workers, and jobs located within the study area of each municipality. The difference between resident workers and located jobs makes it possible to identify municipalities that primarily generate outbound trips and those that attract trips.
