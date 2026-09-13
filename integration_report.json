@@ -1,0 +1,40 @@
+{
+  "in_game_test": false,
+  "api_registration_calls_checked": true,
+  "endpoints": {
+    "buildingsIndex": {
+      "status": 200,
+      "bytes": 479184240
+    },
+    "demandData": {
+      "status": 200,
+      "bytes": 11352960
+    },
+    "roads": {
+      "status": 200,
+      "bytes": 54366930
+    },
+    "runwaysTaxiways": {
+      "status": 200,
+      "bytes": 746937
+    },
+    "oceanDepthIndex": {
+      "status": 200,
+      "bytes": 3290681
+    },
+    "tilesUrl": {
+      "status": 200,
+      "layers": [
+        "buildings",
+        "commercial",
+        "parks"
+      ]
+    },
+    "foundationTilesUrl": {
+      "status": 200,
+      "layers": [
+        "foundations"
+      ]
+    }
+  }
+}

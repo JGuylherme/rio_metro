@@ -1,0 +1,8 @@
+{
+  "id": "com.guylherme.rio",
+  "name": "Rio de Janeiro",
+  "description": "Grande Rio até Japeri: Censo 2022, casas OSM/Overture e batimetria GMRT. Requer serve_rio.py.",
+  "version": "2.0.0",
+  "author": { "name": "guylherme" },
+  "main": "index.js"
+}

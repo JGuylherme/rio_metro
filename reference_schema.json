@@ -1,0 +1,76 @@
+{
+  "source": "User-provided working Berlin map; used as data-format reference only",
+  "config.json": {
+    "root_keys": [
+      "code",
+      "creator",
+      "description",
+      "initialViewState",
+      "name",
+      "population",
+      "thumbnailBbox",
+      "version"
+    ]
+  },
+  "demand_data.json": {
+    "root_keys": [
+      "points",
+      "pops"
+    ],
+    "points": 921,
+    "pops": 39805,
+    "point_keys": [
+      "id",
+      "jobs",
+      "location",
+      "popIds",
+      "residents"
+    ],
+    "pop_keys": [
+      "drivingDistance",
+      "drivingSeconds",
+      "id",
+      "jobId",
+      "residenceId",
+      "size"
+    ]
+  },
+  "roads.geojson": {
+    "root_keys": [
+      "features",
+      "type"
+    ],
+    "features": 117750,
+    "geometry_types": [
+      "LineString"
+    ],
+    "property_keys": [
+      "name",
+      "roadClass",
+      "structure"
+    ]
+  },
+  "runways_taxiways.geojson": {
+    "root_keys": [
+      "features",
+      "type"
+    ],
+    "features": 359,
+    "geometry_types": [
+      "Polygon"
+    ],
+    "property_keys": [
+      "area",
+      "osm_way_id",
+      "roadType",
+      "z_order"
+    ]
+  },
+  "buildings_index.bin": {
+    "magic": "SBBI",
+    "version": 1,
+    "header_bytes": 88,
+    "buildings": 921914,
+    "cell_size": 0.0009
+  }
+}
