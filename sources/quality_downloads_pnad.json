@@ -1,0 +1,20 @@
+{
+  "source_vintages": {
+    "cnefe": "2022, release 20240910",
+    "rais": "2024 second processing, file 20260518"
+  },
+  "files": [
+    {
+      "path": "data/quality_sources/pnad/PNADC_022026.zip",
+      "url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/2026/PNADC_022026.zip",
+      "bytes": 233417777,
+      "sha256": "53f813034dc6d18268e8962716a05a1b374e3f23fc2f596fafc7146cf3bb0b0a"
+    },
+    {
+      "path": "data/quality_sources/pnad/dictionary.zip",
+      "url": "https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/Documentacao/Dicionario_e_input_20221031.zip",
+      "bytes": 70208,
+      "sha256": "691ce2acd94e805741c71ea699888ad628a5fb5cbf1037fdf9626eba6b99cadc"
+    }
+  ]
+}

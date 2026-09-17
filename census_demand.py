@@ -15,24 +15,35 @@ from map_settings import *
 
 
 def text(v,default=''):
-    return str(v) if pd.notna(v) and str(v) else default
+    return str(v) if pd.notna(v) and str(v).strip() not in {'','.'} else default
+
+
+def unique_census(census):
+    """Multipart source records repeat tract attributes; count each tract once."""
+    for _, rows in census.groupby('CD_SETOR'):
+        if rows.v0001.nunique(dropna=False) != 1 or rows.CD_MUN.nunique() != 1:
+            raise ValueError('Conflicting attributes for a repeated census sector')
+    return census.dissolve(by='CD_SETOR',aggfunc='first').reset_index()
 
 
 def generate():
     if (OUT/'demand_data.json').exists() and (DATA/'population_audit.json').exists():return
     buildings=pd.read_pickle(DATA/'buildings.pkl')
-    census=pd.read_pickle(DATA/'census.pkl').reset_index(drop=True)
+    census=unique_census(pd.read_pickle(DATA/'census.pkl'))
     surfaces,labels,edges,nodes=pickle.loads((DATA/'geography.pkl').read_bytes())
     play=box(*PLAY_BBOX)
     water=unary_union([shape(f['geometry']) for layer,f in surfaces if layer=='water'])
     forest=unary_union([shape(f['geometry']) for layer,f in surfaces if layer=='landuse' and f['properties'].get('kind')=='park'])
     industrial=unary_union([shape(f['geometry']) for layer,f in surfaces if layer=='industrial'])
+    # Reuse polygon indexes for millions of point tests instead of scanning rings.
+    for geometry in (play,water,forest,industrial):shapely.prepare(geometry)
+    print('Census geometry prepared; locating building anchors',flush=True)
     geoms=buildings.geometry.to_numpy()
     anchors=shapely.point_on_surface(geoms)
-    inside=shapely.covered_by(anchors,play)
-    wet=shapely.covered_by(anchors,water)
-    wooded=shapely.covered_by(anchors,forest)
-    industry=shapely.covered_by(anchors,industrial)
+    inside=shapely.covers(play,anchors)
+    wet=shapely.covers(water,anchors)
+    wooded=shapely.covers(forest,anchors)
+    industry=shapely.covers(industrial,anchors)
     nonres={'industrial','warehouse','commercial','retail','school','university','hospital','service','garage','garages','farm_auxiliary','shed','parking','manufacturing','agricultural'}
     residential=~buildings['use'].isin(nonres).to_numpy() & ~wet & ~industry
     explicit=buildings['use'].isin({'house','apartments','residential','detached','terrace','semidetached_house'}).to_numpy()
@@ -126,6 +137,9 @@ def generate():
     assert actual==expected
     total_population=sum(actual.values())
     print(f'{total_population:,} census residents; {len(points)-nres:,} mapped employment centers',flush=True)
+    # Employment calibration needs the current sector-to-anchor lineage.
+    util.save(DATA/'demand_metadata.json',metadata)
+    pd.DataFrame(sector_audit).to_csv(DATA/'census_allocation.csv',index=False)
     # Road network: actual directed shortest paths; no straight-line car routes.
     ids=sorted({e[0] for e in edges}|{e[1] for e in edges});idx={n:i for i,n in enumerate(ids)}
     pairs={}
@@ -172,7 +186,7 @@ def generate():
     pd.DataFrame(sector_audit).to_csv(DATA/'census_allocation.csv',index=False)
     pd.DataFrame([m for m in metadata if m['kind']=='residential']).groupby(['municipality','bairro'],dropna=False)['population'].sum().to_csv(ROOT/'population_by_neighborhood.csv')
     util.save(DATA/'population_audit.json',{'source':'IBGE Censo 2022, definitive census-sector geography with attributes',
-        'population':total_population,'commuters':sum(p['size'] for p in pops),'employment_calibration':'PNAD 2026Q2 / CEMPRE 2024 / RAIS neighborhoods 2023',
+        'population':total_population,'commuters':sum(p['size'] for p in pops),'employment_calibration':'Census 2022 age and municipal workers / PNAD informality / CEMPRE 2024 / RAIS 2023',
         'residential_points':nres,'employment_points':len(points)-nres,'pops':len(pops),
         'same_neighborhood_relocations':len(unplaced),'neighborhood_totals_preserved':actual==expected,
         'road_access_over_1000m':int((access>1000).sum()),'max_road_access_m':float(access.max()),

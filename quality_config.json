@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "version": "2.2.0",
+  "seed": 20260916,
+  "workplace_grid_m": 1500,
+  "maximum_workplace_points": 2400,
+  "within_od_nearest_workplaces": 10,
+  "within_od_largest_workplaces": 6,
+  "within_od_nearest_origins_per_workplace": 24,
+  "gravity_decay_seconds": 2400,
+  "road_connector_speed_kmh": 20,
+  "informal_activity_shares_status": "PNAD 2026Q2 metropolitan microdata, weighted informal broad activity groups. Fine splits within broad groups use RAIS formal composition as an explicit proxy.",
+  "od_reference": "Census 2022 municipal containment + historical 2010 sampled destination structure; not an observed 2022 pair matrix",
+  "zero_pair_smoothing_share": 0.001
+}

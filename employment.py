@@ -1,4 +1,4 @@
-"""Calibrate worker origins and job destinations using PNAD, CEMPRE and RAIS."""
+"""Calibrate Census 2022 worker origins and CEMPRE/RAIS job destinations."""
 import json
 from collections import defaultdict
 import numpy as np
@@ -40,6 +40,12 @@ def benchmarks(points):
     missing=np.flatnonzero(sector<0)
     if len(missing):sector[missing]=tree.nearest(positions[missing])
     mun=census.iloc[sector].CD_MUN.astype(str).to_numpy()
+    metadata={p['id']:p for p in json.loads((DATA/'demand_metadata.json').read_text())}
+    for i,p in enumerate(points):
+        if p['residents']:
+            codes={str(s)[:7] for s in metadata[p['id']]['sectors']}
+            if len(codes)!=1:raise ValueError('Residential aggregation crosses municipalities')
+            mun[i]=codes.pop()
     municipality=census.iloc[sector].NM_MUN.to_numpy()
     bairro=census.iloc[sector].NM_BAIRRO.fillna('').to_numpy()
     # Exact neighborhood geometry from the RAIS geography, rather than name guesses.
@@ -54,12 +60,13 @@ def benchmarks(points):
     if len(missing_rio):neighborhood[missing_rio]=bt.nearest(positions[missing_rio])
     # Full-municipality populations make edge-of-map CEMPRE weights proportional.
     import pyogrio
-    full=pyogrio.read_dataframe(DATA/'RJ_setores_CD2022.gpkg',columns=['CD_MUN','v0001'],read_geometry=False)
+    full=pyogrio.read_dataframe(DATA/'RJ_setores_CD2022.gpkg',columns=['CD_SETOR','CD_MUN','v0001'],read_geometry=False).drop_duplicates('CD_SETOR')
     fullpop=full.groupby('CD_MUN').v0001.sum().to_dict()
     residents=np.array([p['residents'] for p in points])
     metropolitan={'3300456','3301702','3301850','3301900','3302007','3302270','3302502','3302700','3302858','3303203','3303302','3303500','3303609','3304144','3304557','3304904','3305109','3305554'}
-    worker_rates=np.array([rates['capital'] if m=='3304557' else rates['metropolitan_remainder'] if m in metropolitan else rates['state'] for m in mun])
-    workers=integer_totals(residents*worker_rates)
+    from census_workers import allocate_workers
+    workers,resident_info=allocate_workers(points,mun)
+    worker_rates=np.divide(workers,residents,out=np.zeros(len(points)),where=residents>0)
     keys=[];labels={}
     for i,p in enumerate(points):
         if neighborhood[i]>=0:
@@ -102,7 +109,7 @@ def benchmarks(points):
         'metropolitan_unemployment_rate':vals['3301','4099']/100,'metropolitan_informality_share':informal,
         'informal_spatial_proxy':'75% resident population + 25% formal employment geography',
         'geographic_nearest_fallbacks':int(len(missing)),'rio_neighborhood_nearest_fallbacks':int(len(missing_rio)),
-        'municipality_formal_weights':municipality_weights,'counts_are_calibrated_estimates_not_official_neighborhood_job_totals':True}
+        'municipality_formal_weights':municipality_weights,'counts_are_calibrated_estimates_not_official_neighborhood_job_totals':True,**resident_info}
     return workers,groups,targets,info
 
 
@@ -161,11 +168,14 @@ def rebalance(demand):
     df.groupby('municipality')[['residents','resident_workers','jobs']].sum().to_csv(ROOT/'employment_by_municipality.csv')
     locations=json.loads((DATA/'employment_locations.json').read_text())
     fundao=np.array([x['municipality']=='Rio de Janeiro' and x['bairro']=='Cidade Universitária' for x in locations])
-    info.update({'method':'doubly constrained gravity model on existing road routes; PNAD residence totals and CEMPRE/RAIS job geography',
+    info.update({'method':'doubly constrained gravity model on road routes; Census 2022 age structure and municipal employment, CEMPRE/RAIS job geography',
         'population':sum(p['residents'] for p in points),'commuters':int(actual.sum()),'fundao_jobs_before':int(before[fundao].sum()),
         'fundao_jobs_after':int(actual[fundao].sum()),'fundao_definition':'RAIS Cidade Universitária neighborhood polygon, excluding mainland neighbors','maximum_jobs_at_one_point':int(actual.max()),'iterations':iteration+1,
         'pops':len(output),'max_neighborhood_rounding_difference':int(np.abs(actual_group-targets).max())})
     (DATA/'employment_audit.json').write_text(json.dumps(info,indent=2,ensure_ascii=False)+'\n')
+    from census_workers import audit_commuting
+    municipality=df.municipality_code.astype(str).to_numpy()[groups]
+    audit_commuting(points,output,municipality)
     return demand
 
 
@@ -175,7 +185,7 @@ def main():
     path.write_text(json.dumps(demand,separators=(',',':'),ensure_ascii=False))
     audit=json.loads((DATA/'population_audit.json').read_text());audit['pops']=len(demand['pops'])
     audit['commuters']=sum(p['size'] for p in demand['pops']);audit.pop('commuter_share_assumption',None)
-    audit['employment_calibration']='PNAD 2026Q2 / CEMPRE 2024 / RAIS neighborhoods 2023'
+    audit['employment_calibration']='Census 2022 age and municipal workers / PNAD 2026Q2 informality / CEMPRE 2024 / RAIS 2023'
     (DATA/'population_audit.json').write_text(json.dumps(audit,separators=(',',':')))
     print((DATA/'employment_audit.json').read_text(),flush=True)
 

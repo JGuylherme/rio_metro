@@ -15,7 +15,7 @@
         cityCode: 'RIO', tilesUrl: base + '/RIO/{z}/{x}/{y}.mvt',
         foundationTilesUrl: base + '/RIO_foundations/{z}/{x}/{y}.mvt', maxZoom: 15
     });
-    api.map.setDefaultLayerVisibility('RIO', { buildingFoundations: true, oceanFoundations: true });
+    api.map.setDefaultLayerVisibility('RIO', { buildingFoundations: true, oceanFoundations: false });
     api.map.registerSource('rio-scenery', {
         type: 'vector', tiles: [base + '/RIO/{z}/{x}/{y}.mvt'], minzoom: 6, maxzoom: 15,
         bounds: [-44.06, -23.24, -42.67, -22.40]

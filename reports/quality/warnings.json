@@ -1,0 +1,129 @@
+[
+  {
+    "kind": "aggregated_workplace_over_20000",
+    "points": [
+      {
+        "id": "WRK_0775",
+        "jobs": 32393
+      },
+      {
+        "id": "WRK_0776",
+        "jobs": 26975
+      },
+      {
+        "id": "WRK_0781",
+        "jobs": 28614
+      },
+      {
+        "id": "WRK_0970",
+        "jobs": 30764
+      },
+      {
+        "id": "WRK_1342",
+        "jobs": 21354
+      },
+      {
+        "id": "WRK_1512",
+        "jobs": 20067
+      },
+      {
+        "id": "WRK_1542",
+        "jobs": 20671
+      },
+      {
+        "id": "WRK_1630",
+        "jobs": 27876
+      },
+      {
+        "id": "WRK_1642",
+        "jobs": 32078
+      },
+      {
+        "id": "WRK_1643",
+        "jobs": 26522
+      },
+      {
+        "id": "WRK_1655",
+        "jobs": 31819
+      },
+      {
+        "id": "WRK_1666",
+        "jobs": 46612
+      },
+      {
+        "id": "WRK_1677",
+        "jobs": 21548
+      },
+      {
+        "id": "WRK_1682",
+        "jobs": 101484
+      },
+      {
+        "id": "WRK_1683",
+        "jobs": 31328
+      },
+      {
+        "id": "WRK_1690",
+        "jobs": 30649
+      },
+      {
+        "id": "WRK_1692",
+        "jobs": 27009
+      },
+      {
+        "id": "WRK_1695",
+        "jobs": 21124
+      },
+      {
+        "id": "WRK_1696",
+        "jobs": 24205
+      },
+      {
+        "id": "WRK_1702",
+        "jobs": 32396
+      },
+      {
+        "id": "WRK_1703",
+        "jobs": 44694
+      },
+      {
+        "id": "WRK_1704",
+        "jobs": 36964
+      },
+      {
+        "id": "WRK_1705",
+        "jobs": 24772
+      },
+      {
+        "id": "WRK_1706",
+        "jobs": 125331
+      },
+      {
+        "id": "WRK_1707",
+        "jobs": 165844
+      },
+      {
+        "id": "WRK_1717",
+        "jobs": 126656
+      },
+      {
+        "id": "WRK_1718",
+        "jobs": 123345
+      },
+      {
+        "id": "WRK_1862",
+        "jobs": 22088
+      }
+    ],
+    "meaning": "Aggregates multiple addresses; not verified single-building capacities. Inspect workplace_placement.csv."
+  },
+  {
+    "kind": "long_road_connectors",
+    "points": 26,
+    "max_m": 15074.718564062092
+  },
+  {
+    "kind": "road_trips_over_two_hours",
+    "commuters": 1
+  }
+]

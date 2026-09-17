@@ -1,0 +1,11 @@
+{
+  "year": 2010,
+  "universe": "worked outside own home, one municipality; V0660=2 or 3",
+  "expansion": "V0010 implied 13 decimal places; municipality V0001+V0002, destination V6604",
+  "excluded_weighted": {
+    "1": 1564892.552297095,
+    "5": 51170.96990066508,
+    "4": 2087.5073039207628
+  },
+  "warning": "Sample expansion, historical structure. Not an enumerated matrix or 2022 observations."
+}

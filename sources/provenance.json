@@ -1,0 +1,28 @@
+{
+  "retrieved_on": "2026-09-15",
+  "sources": {
+    "census_workers_2022.json": {
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/10261/periodos/2022/variaveis/4090?localidades=N6%5BN3%5B33%5D%5D&classificacao=11913%5B96165%5D%7C2%5B6794%5D%7C86%5B95251%5D",
+      "sha256": "a1bea59c7294a8056235e86ce9fd467d5086c3e1f9e57003b0e98e5d117f7fed"
+    },
+    "census_workers_metadata.json": {
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/10261/metadados",
+      "sha256": "9c4078f37c450f88c3d7eb6af500d846cc0126c7a81c8c38046fc31409b3d9e1"
+    },
+    "census_commuting_2022.json": {
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/10329/periodos/2022/variaveis/13373?localidades=N6%5BN3%5B33%5D%5D&classificacao=469%5Ball%5D%7C2%5B6794%5D%7C386%5B9680%5D%7C2087%5B79177%5D",
+      "sha256": "6e278d8228fe8d8c62d4403e4115eb91fe258d8684f21f3886c636fe6e9f1bff"
+    },
+    "census_commuting_metadata.json": {
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/10329/metadados",
+      "sha256": "c052434d10fb72010b0fff1979dcb7073f48207ff5481c6159d246965d30c891"
+    },
+    "census_demography_rj_2022.csv": {
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/Agregados_por_Setor_csv/Agregados_por_setores_demografia_BR.zip",
+      "sha256": "dde3d067b8967401bedcce75c61e1551cff1911f8f0d86c1273c6433932de5b0",
+      "transformation": "CSV filtered to CD_setor starting with 33 (Rio de Janeiro); all original columns; comma-delimited UTF-8",
+      "upstream_zip_sha256": "f8486233ce2f6559de76299390577c58d05f35cad07c46098e6e565949c8b269",
+      "rows": 40519
+    }
+  }
+}

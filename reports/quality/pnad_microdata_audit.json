@@ -1,0 +1,82 @@
+{
+  "period": "2026Q2",
+  "territory": "UF=33, RM_RIDE=33",
+  "occupied_expanded": 6018053.643937047,
+  "informal_expanded": 2276408.296271092,
+  "informality_microdata": 0.3782632111570631,
+  "definition": "VD4009 in 2,4,10; or 8,9 with V4019=2; weight V1028",
+  "groups": [
+    {
+      "group": 1,
+      "expanded_informal": 14514.71953933999,
+      "sample_records": 81,
+      "share": 0.00637614946453853
+    },
+    {
+      "group": 2,
+      "expanded_informal": 148396.59045024996,
+      "sample_records": 243,
+      "share": 0.06518891654600514
+    },
+    {
+      "group": 3,
+      "expanded_informal": 240270.9099161396,
+      "sample_records": 438,
+      "share": 0.10554824910351948
+    },
+    {
+      "group": 4,
+      "expanded_informal": 358269.32992068963,
+      "sample_records": 612,
+      "share": 0.1573835987628224
+    },
+    {
+      "group": 5,
+      "expanded_informal": 269476.9855869801,
+      "sample_records": 429,
+      "share": 0.11837814245730933
+    },
+    {
+      "group": 6,
+      "expanded_informal": 215351.62946211998,
+      "sample_records": 375,
+      "share": 0.0946014956169683
+    },
+    {
+      "group": 7,
+      "expanded_informal": 296190.47546973993,
+      "sample_records": 497,
+      "share": 0.13011307152364524
+    },
+    {
+      "group": 8,
+      "expanded_informal": 1338.88483285,
+      "sample_records": 2,
+      "share": 0.0005881567182140315
+    },
+    {
+      "group": 9,
+      "expanded_informal": 177226.12549796,
+      "sample_records": 313,
+      "share": 0.07785339993193144
+    },
+    {
+      "group": 10,
+      "expanded_informal": 262048.41077817997,
+      "sample_records": 425,
+      "share": 0.11511485492625936
+    },
+    {
+      "group": 11,
+      "expanded_informal": 277142.69827739015,
+      "sample_records": 543,
+      "share": 0.12174560193413823
+    },
+    {
+      "group": 12,
+      "expanded_informal": 16181.536539449997,
+      "sample_records": 22,
+      "share": 0.0071083630146474295
+    }
+  ]
+}

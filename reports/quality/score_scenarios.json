@@ -1,0 +1,44 @@
+{
+  "official_previous_reviewed_composite": 0.33,
+  "rubric_url": "https://github.com/Subway-Builder-Modded/registry/blob/main/docs/data-quality.md",
+  "formula": "W/R=(0.5*count+0.5*resolution*intensity)*grain; composite=0.5W+0.35R+0.15OD",
+  "qualification": "Scenario analysis, not a prediction or submitted review. Unknown business activity, informal placement, broad CEPs and historical OD can receive lower classifications.",
+  "scenarios": [
+    {
+      "scenario": "Conservative placement and municipal fallback; OD discounted to marginal",
+      "workplace": 0.45324999999999993,
+      "resident": 0.6649999999999999,
+      "od": 0.35,
+      "composite": 0.511875,
+      "conditional_tier": "medium",
+      "reviewed": false
+    },
+    {
+      "scenario": "Municipal workplace grain; measured census-unit residence; historical sampled OD accepted",
+      "workplace": 0.45324999999999993,
+      "resident": 0.76,
+      "od": 0.5249999999999999,
+      "composite": 0.571375,
+      "conditional_tier": "medium",
+      "reviewed": false
+    },
+    {
+      "scenario": "Submunicipal workplace grain accepted; OD discounted to marginal",
+      "workplace": 0.58275,
+      "resident": 0.76,
+      "od": 0.35,
+      "composite": 0.609875,
+      "conditional_tier": "high",
+      "reviewed": false
+    },
+    {
+      "scenario": "Submunicipal workplace grain and historical sampled OD accepted",
+      "workplace": 0.58275,
+      "resident": 0.76,
+      "od": 0.5249999999999999,
+      "composite": 0.6361249999999999,
+      "conditional_tier": "high",
+      "reviewed": false
+    }
+  ]
+}

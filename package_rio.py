@@ -3,6 +3,7 @@ import json
 import shutil
 import zipfile
 from release_demand import export_demand
+from special_demand import release_with_special_demand
 from map_settings import ROOT,OUT,VERSION
 FILES=['config.json','demand_data.json','roads.geojson','runways_taxiways.geojson','buildings_index.bin','RIO.pmtiles','RIO_foundations.pmtiles','ocean_depth_index.json.gz']
 
@@ -18,7 +19,7 @@ def main():
         if not (OUT/name).is_file() or (OUT/name).stat().st_size==0:
             raise ValueError('Missing or empty map file: '+name)
     dist=ROOT/'dist';dist.mkdir(exist_ok=True)
-    demand=export_demand(json.loads((OUT/'demand_data.json').read_text()))
+    demand,special_report=release_with_special_demand(export_demand(json.loads((OUT/'demand_data.json').read_text())))
     demand_bytes=json.dumps(demand,separators=(',',':'),ensure_ascii=False).encode()
     print('Residentes de demanda = pops = '+str(sum(p['size'] for p in demand['pops'])),flush=True)
     temporary=dist/'RIO.zip.tmp'
@@ -32,6 +33,10 @@ def main():
             raise ValueError('Invalid map ZIP')
     temporary.replace(dist/'RIO.zip')
     shutil.copyfile(manifest,dist/'manifest.json')
+    (dist/'special_demand_report.json').write_text(json.dumps(special_report,indent=2,ensure_ascii=False)+'\n')
+    (dist/'registry_update.json').write_text(json.dumps({'map_id':'rio-metropolitan','version':VERSION,
+        'special_demand':special_report['suggested_registry_tags'],
+        'quality_tier':'requires maintainer re-review; not assigned locally'},indent=2)+'\n')
     print('Pronto: '+str(dist/'RIO.zip'),flush=True)
     print('Manifest separado: '+str(dist/'manifest.json'),flush=True)
 

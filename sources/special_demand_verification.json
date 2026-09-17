@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-09-16",
+  "sources": [
+    {
+      "url": "https://cpa.uff.br/wp-content/uploads/sites/790/2024/09/Relatorio_AutoavaliacaoUFF_2024-INTEGRAL_2021-2022-2023.pdf",
+      "locator": "Figure 12, printed p.46 / PDF p.47; chart extracted and visually checked",
+      "facts": {
+        "Niteroi_undergraduate_registrations": 36314,
+        "snapshot": "2024-04-27",
+        "distance_education_excluded": 20867
+      },
+      "sha256": "7db91c9e3ea79f7ca423a4a7566af6bd57c5e6ae5bbeaa4ae3477c21e3d95d68"
+    },
+    {
+      "url": "https://www.saude.rj.gov.br/comum/code/MostrarArquivo.php?C=MjY5NTk%2C",
+      "locator": "Annex 1, PDF p.11; document signed November 2019; process SEI-08/001/006114/2019",
+      "facts": {
+        "Bonsucesso_beds": 526,
+        "Servidores_beds": 420,
+        "Pedro_Ernesto_beds": 415,
+        "Getulio_Vargas_beds": 388
+      },
+      "sha256": "dc6529378dca6addeaeab2116b06151fe5a6c5249659c1cea40b71730975d473"
+    }
+  ],
+  "other_sources": "See special_demand_sites.json. Counts converted to demand using explicit assumptions, not measured OD."
+}

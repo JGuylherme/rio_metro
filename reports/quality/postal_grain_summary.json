@@ -1,0 +1,6 @@
+{
+  "postal_matched_share": 0.8529482917118824,
+  "municipal_fallback_share": 0.14705170828811767,
+  "postal_with_address_extent_over_5km_links_share": 0.09682783027018807,
+  "interpretation": "CEP counts are observed; address coordinates and class matches are allocation support, not identified RAIS establishments. Wide postal areas and municipal fallbacks limit effective grain."
+}

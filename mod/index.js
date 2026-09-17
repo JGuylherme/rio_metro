@@ -2,7 +2,7 @@
     const api = window.SubwayBuilderAPI;
     if (!api) { console.error('[Rio] SubwayBuilderAPI indisponível.'); return; }
     const base = 'http://127.0.0.1:8080';
-    api.registerCity({ ...{"name": "Rio de Janeiro", "code": "RIO", "description": "Build a rail network across Greater Rio, connecting Rio de Janeiro, the Baixada Fluminense, Niterói, São Gonçalo and the wider metropolitan area.", "population": 11522312, "initialViewState": {"zoom": 10.5, "latitude": -22.84, "longitude": -43.3, "bearing": 0}, "minZoom": 8, "buildingZoomOffset": -0.75}, mapImageUrl: base + '/RIO/thumbnail.png' });
+    api.registerCity({ ...{"name": "Rio de Janeiro", "code": "RIO", "description": "Build a rail network across Greater Rio, connecting Rio de Janeiro, the Baixada Fluminense, Niterói, São Gonçalo and the wider metropolitan area.", "population": 11491836, "initialViewState": {"zoom": 10.5, "latitude": -22.84, "longitude": -43.3, "bearing": 0}, "minZoom": 8, "buildingZoomOffset": -0.75}, mapImageUrl: base + '/RIO/thumbnail.png' });
     api.cities.registerTab({ id: 'BR', label: 'BR', emoji: '🇧🇷', cityCodes: ['RIO'] });
     api.cities.setCityDataFiles('RIO', {
         buildingsIndex: base + '/data/RIO/buildings_index.bin',
@@ -15,7 +15,7 @@
         cityCode: 'RIO', tilesUrl: base + '/RIO/{z}/{x}/{y}.mvt',
         foundationTilesUrl: base + '/RIO_foundations/{z}/{x}/{y}.mvt', maxZoom: 15
     });
-    api.map.setDefaultLayerVisibility('RIO', { buildingFoundations: true, oceanFoundations: true });
+    api.map.setDefaultLayerVisibility('RIO', { buildingFoundations: true, oceanFoundations: false });
     api.map.registerSource('rio-scenery', {
         type: 'vector', tiles: [base + '/RIO/{z}/{x}/{y}.mvt'], minzoom: 6, maxzoom: 15,
         bounds: [-44.06, -23.24, -42.67, -22.40]

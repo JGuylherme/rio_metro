@@ -1,7 +1,7 @@
 """Update this Rio map in an existing Railyard installation, without touching saves."""
-import argparse,gzip,json,re,shutil
+import argparse,gzip,json,re,shutil,zipfile
 from pathlib import Path
-from map_settings import ROOT,OUT,DATA
+from map_settings import ROOT,OUT,DATA,VERSION
 
 
 def atomic_copy(source,target,compress=False):
@@ -16,13 +16,22 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--tiles',action='store_true',help='Also replace map/foundation tiles and ocean depth index')
     args=parser.parse_args()
+    # Install the exact balanced release, including special demand, rather than
+    # the intermediate census-population file used by the generation pipeline.
+    stage=DATA/'release_install';stage.mkdir(parents=True,exist_ok=True)
+    with zipfile.ZipFile(ROOT/'dist/RIO.zip') as archive:
+        city=json.loads(archive.read('config.json'))
+        if city.get('code')!='RIO' or city.get('version')!=VERSION:
+            raise SystemExit('Rebuild dist/RIO.zip before installing this version.')
+        for name in ['config.json','demand_data.json']:
+            (stage/name).write_bytes(archive.read(name))
     game=Path.home()/'Library/Application Support/metro-maker4'
     loader=game/'mods/mapLoader/index.js'
     if not loader.exists():raise SystemExit('Railyard mapLoader not found; import dist/RIO.zip first.')
     source=loader.read_text()
     match=re.search(r'var config = (\{[^\n]+\});',source)
     if not match:raise SystemExit('Unsupported mapLoader configuration; no changes made.')
-    config=json.loads(match.group(1));city=json.loads((OUT/'config.json').read_text())
+    config=json.loads(match.group(1))
     places=[p for p in config['places'] if p['code']=='RIO']
     if not places:raise SystemExit('Import dist/RIO.zip in Railyard first.')
     for p in places:p.update({k:city[k] for k in ['country','population','description','initialViewState','minZoom','buildingZoomOffset']})
@@ -35,9 +44,9 @@ def main():
         compressed=target/(name+'.gz')
         if compressed.exists():destination=compressed
         if destination.exists() and not (backup/destination.name).exists():shutil.copy2(destination,backup/destination.name)
-        atomic_copy(OUT/name,destination,compress=destination.suffix=='.gz')
+        atomic_copy(stage/name,destination,compress=destination.suffix=='.gz')
         # Keep both forms synchronized if an older installation left both behind.
-        if compressed.exists() and (target/name).exists():atomic_copy(OUT/name,target/name)
+        if compressed.exists() and (target/name).exists():atomic_copy(stage/name,target/name)
     if args.tiles:
         tiles=Path.home()/'Library/Application Support/railyard/tiles'
         if not tiles.is_dir():raise SystemExit('Railyard tiles directory not found; import ZIP instead.')

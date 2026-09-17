@@ -44,7 +44,7 @@ Duque de Caxias,Chácaras Rio-Petrópolis,13583
 Duque de Caxias,Cidade Parque Paulista,27210
 Duque de Caxias,Cidade dos Meninos,2440
 Duque de Caxias,Doutor Laureano,38863
-Duque de Caxias,Duque de Caxias,2391
+Duque de Caxias,Duque de Caxias,2372
 Duque de Caxias,Figueira,16511
 Duque de Caxias,Gramacho,49207
 Duque de Caxias,Imbariê,29773
@@ -73,7 +73,7 @@ Duque de Caxias,Vila São Luís,24813
 Duque de Caxias,Vinte e Cinco de Agosto,14321
 Duque de Caxias,Xerém,17109
 Engenheiro Paulo de Frontin,Engenheiro Paulo de Frontin,167
-Guapimirim,Guapimirim,12404
+Guapimirim,Guapimirim,13443
 Itaboraí,Aldeia da Prata,4933
 Itaboraí,Alto Jacu,37
 Itaboraí,Ampliação,15084
@@ -116,7 +116,7 @@ Itaboraí,Parque Aurora,1487
 Itaboraí,Perobas,313
 Itaboraí,Pitanga,43
 Itaboraí,Porto das Caixas,2790
-Itaboraí,Quissamã,5119
+Itaboraí,Quissamã,5014
 Itaboraí,Recanto dos Magalhães,398
 Itaboraí,Retiro,1938
 Itaboraí,Retiro São Joaquim,8782
@@ -137,7 +137,7 @@ Itaboraí,Vila Verde,1639
 Itaboraí,Vila Visconde,1897
 Itaboraí,Vilage do Sol,395
 Itaboraí,Visconde,1553
-Itaguaí,Itaguaí,117232
+Itaguaí,Itaguaí,116807
 Japeri,Alecrim,3970
 Japeri,Aljezur,1187
 Japeri,Bananal,1290
@@ -169,11 +169,11 @@ Japeri,São Pedro,114
 Japeri,Virgem de Fátima,1672
 Japeri,das Granjas,895
 Japeri,dos Eucaliptos,6605
-Magé,Magé,218335
-Mangaratiba,Mangaratiba,1339
-Maricá,Maricá,146389
+Magé,Magé,217290
+Mangaratiba,Mangaratiba,1295
+Maricá,Maricá,144406
 Mendes,Mendes,3
-Mesquita,Alto Uruguai,4503
+Mesquita,Alto Uruguai,4386
 Mesquita,BNH,5201
 Mesquita,Banco de Areia,10464
 Mesquita,Centro,13636
@@ -186,7 +186,7 @@ Mesquita,Jacutinga,10904
 Mesquita,Juscelino,7086
 Mesquita,Mesquita,44
 Mesquita,Rocha Sobrinho,9230
-Mesquita,Santa Terezinha,10656
+Mesquita,Santa Terezinha,10614
 Mesquita,Santo Elias,11257
 Mesquita,Vila Emil,14522
 Mesquita,Vila Norma,4198
@@ -209,7 +209,7 @@ Nilópolis,da Mina,12758
 Niterói,Badu,7055
 Niterói,Baldeador,4335
 Niterói,Barreto,18699
-Niterói,Boa Viagem,2486
+Niterói,Boa Viagem,1944
 Niterói,Cachoeira,2998
 Niterói,Cafubá,4538
 Niterói,Camboinhas,6137
@@ -224,13 +224,13 @@ Niterói,Fonseca,46317
 Niterói,Fátima,3783
 Niterói,Gragoatá,250
 Niterói,Icaraí,77247
-Niterói,Ilha da Conceição,8399
+Niterói,Ilha da Conceição,5719
 Niterói,Ingá,15124
 Niterói,Itacoatiara,2209
 Niterói,Itaipu,7862
 Niterói,Ititioca,5864
 Niterói,Jacaré,4878
-Niterói,Jardim Imbuí,1190
+Niterói,Jardim Imbuí,1170
 Niterói,Jurujuba,3770
 Niterói,Largo da Batalha,9637
 Niterói,Maceió,4054
@@ -314,7 +314,7 @@ Nova Iguaçu,Santa Rita,25812
 Nova Iguaçu,Tinguazinho,11299
 Nova Iguaçu,Tinguá,4094
 Nova Iguaçu,Três Corações,3235
-Nova Iguaçu,"U.R.G. de Tinguá,Adrianópolis,Rio D'Ouro e Jacer",1210
+Nova Iguaçu,"U.R.G. de Tinguá,Adrianópolis,Rio D'Ouro e Jacer",1406
 Nova Iguaçu,Unidade Regional de Governo Centro - URG I,52
 Nova Iguaçu,Unidade Regional de Governo de Km 32 - URG VIII,215
 Nova Iguaçu,Valverde,12007
@@ -328,15 +328,16 @@ Nova Iguaçu,da Palhada,14200
 Nova Iguaçu,da Posse,10921
 Nova Iguaçu,da Prata,6933
 Nova Iguaçu,da Viga,10299
-Paracambi,Paracambi,40406
+Paracambi,Paracambi,40508
+Petrópolis,Petrópolis,19
 Piraí,Piraí,9087
-Queimados,Centro,23389
+Queimados,Centro,27951
 Queimados,Industrial,526
-Queimados,Leste,6386
-Queimados,Nordeste,24347
-Queimados,Norte,22037
-Queimados,Oeste,54384
-Queimados,Sul,11093
+Queimados,Leste,8672
+Queimados,Nordeste,20281
+Queimados,Norte,19128
+Queimados,Oeste,52954
+Queimados,Sul,11011
 Rio Claro,Rio Claro,67
 Rio de Janeiro,Abolição,9196
 Rio de Janeiro,Acari,29673
@@ -344,7 +345,7 @@ Rio de Janeiro,Alto da Boa Vista,8079
 Rio de Janeiro,Anchieta,52569
 Rio de Janeiro,Andaraí,34576
 Rio de Janeiro,Anil,31895
-Rio de Janeiro,Bancários,11907
+Rio de Janeiro,Bancários,11062
 Rio de Janeiro,Bangu,209302
 Rio de Janeiro,Barra da Tijuca,151603
 Rio de Janeiro,Barra de Guaratiba,5091
@@ -355,7 +356,7 @@ Rio de Janeiro,Bonsucesso,16872
 Rio de Janeiro,Botafogo,76728
 Rio de Janeiro,Brás de Pina,45048
 Rio de Janeiro,Cachambi,39022
-Rio de Janeiro,Cacuia,10765
+Rio de Janeiro,Cacuia,10392
 Rio de Janeiro,Caju,24116
 Rio de Janeiro,Camorim,7037
 Rio de Janeiro,Campinho,8579
@@ -372,11 +373,11 @@ Rio de Janeiro,Cidade de Deus,30576
 Rio de Janeiro,Cocotá,5021
 Rio de Janeiro,Coelho Neto,26780
 Rio de Janeiro,Colégio,26358
-Rio de Janeiro,Complexo do Alemão,54500
+Rio de Janeiro,Complexo do Alemão,54202
 Rio de Janeiro,Copacabana,128919
 Rio de Janeiro,Cordovil,34668
 Rio de Janeiro,Cosme Velho,6408
-Rio de Janeiro,Cosmos,97570
+Rio de Janeiro,Cosmos,95484
 Rio de Janeiro,Costa Barros,26272
 Rio de Janeiro,Curicica,29038
 Rio de Janeiro,Del Castilho,20597
@@ -388,9 +389,9 @@ Rio de Janeiro,Engenho da Rainha,24188
 Rio de Janeiro,Engenho de Dentro,42826
 Rio de Janeiro,Estácio,23260
 Rio de Janeiro,Flamengo,43099
-Rio de Janeiro,Freguesia (Ilha do Governador),21360
+Rio de Janeiro,Freguesia (Ilha do Governador),15900
 Rio de Janeiro,Freguesia (Jacarepaguá),75912
-Rio de Janeiro,Galeão,23498
+Rio de Janeiro,Galeão,20816
 Rio de Janeiro,Gamboa,11416
 Rio de Janeiro,Gardênia Azul,20490
 Rio de Janeiro,Gericinó,23130
@@ -398,7 +399,7 @@ Rio de Janeiro,Glória,7120
 Rio de Janeiro,Grajaú,32816
 Rio de Janeiro,Grumari,184
 Rio de Janeiro,Guadalupe,40820
-Rio de Janeiro,Guaratiba,160488
+Rio de Janeiro,Guaratiba,159888
 Rio de Janeiro,Gávea,14100
 Rio de Janeiro,Higienópolis,14227
 Rio de Janeiro,Honório Gurgel,18213
@@ -416,7 +417,7 @@ Rio de Janeiro,Jardim Botânico,15871
 Rio de Janeiro,Jardim Carioca,20374
 Rio de Janeiro,Jardim Guanabara,27084
 Rio de Janeiro,Jardim Sulacap,14396
-Rio de Janeiro,Joá,1966
+Rio de Janeiro,Joá,983
 Rio de Janeiro,Lagoa,18676
 Rio de Janeiro,Lapa,8984
 Rio de Janeiro,Laranjeiras,39982
@@ -437,7 +438,7 @@ Rio de Janeiro,Olaria,51222
 Rio de Janeiro,Oswaldo Cruz,29819
 Rio de Janeiro,Paciência,105701
 Rio de Janeiro,Padre Miguel,60410
-Rio de Janeiro,Paquetá,4185
+Rio de Janeiro,Paquetá,3486
 Rio de Janeiro,Parada de Lucas,22069
 Rio de Janeiro,Parque Anchieta,21552
 Rio de Janeiro,Parque Colúmbia,8222
@@ -455,24 +456,24 @@ Rio de Janeiro,Praça Seca,63158
 Rio de Janeiro,Praça da Bandeira,7215
 Rio de Janeiro,Quintino Bocaiúva,25271
 Rio de Janeiro,Ramos,34453
-Rio de Janeiro,Realengo,167919
+Rio de Janeiro,Realengo,167027
 Rio de Janeiro,Recreio dos Bandeirantes,140437
 Rio de Janeiro,Riachuelo,10514
-Rio de Janeiro,Ribeira,5425
+Rio de Janeiro,Ribeira,3474
 Rio de Janeiro,Ricardo de Albuquerque,27779
 Rio de Janeiro,Rio Comprido,40269
 Rio de Janeiro,Rocha,14627
 Rio de Janeiro,Rocha Miranda,36360
 Rio de Janeiro,Rocinha,72154
 Rio de Janeiro,Sampaio,8832
-Rio de Janeiro,Santa Cruz,249134
-Rio de Janeiro,Santa Teresa,36176
+Rio de Janeiro,Santa Cruz,249130
+Rio de Janeiro,Santa Teresa,35873
 Rio de Janeiro,Santo Cristo,9936
 Rio de Janeiro,Santíssimo,48187
 Rio de Janeiro,Saúde,1876
 Rio de Janeiro,Senador Camará,107267
 Rio de Janeiro,Senador Vasconcelos,32296
-Rio de Janeiro,Sepetiba,59584
+Rio de Janeiro,Sepetiba,58738
 Rio de Janeiro,São Conrado,9739
 Rio de Janeiro,São Cristóvão,28016
 Rio de Janeiro,São Francisco Xavier,6340
@@ -500,7 +501,7 @@ Rio de Janeiro,Vila da Penha,21950
 Rio de Janeiro,Vista Alegre,7059
 Rio de Janeiro,Zumbi,1817
 Rio de Janeiro,Água Santa,6419
-Seropédica,Seropédica,81044
+Seropédica,Seropédica,80596
 São Gonçalo,Almerinda,10626
 São Gonçalo,Amendoeira,11485
 São Gonçalo,Anaia Grande,1328
@@ -512,38 +513,38 @@ São Gonçalo,Arsenal,12156
 São Gonçalo,Barracão,3967
 São Gonçalo,Barro Vermelho,9142
 São Gonçalo,Barro Vermelho II,3273
-São Gonçalo,Boa Vista,14098
+São Gonçalo,Boa Vista,13921
 São Gonçalo,Boaçu,22620
 São Gonçalo,Bom Retiro,23581
 São Gonçalo,Brasilândia,1385
-São Gonçalo,Brasilândia II,4081
+São Gonçalo,Brasilândia II,3938
 São Gonçalo,Camarão,2897
 São Gonçalo,Centro,4705
-São Gonçalo,Coelho,15771
+São Gonçalo,Coelho,15451
 São Gonçalo,Colubandê,27997
 São Gonçalo,Covanca,6860
-São Gonçalo,Covanca II,4902
+São Gonçalo,Covanca II,4759
 São Gonçalo,Cruzeiro do Sul,3933
 São Gonçalo,Eliane,4130
 São Gonçalo,Engenho Pequeno,1906
-São Gonçalo,Engenho Pequeno II,8405
+São Gonçalo,Engenho Pequeno II,7737
 São Gonçalo,Engenho do Roçado,6694
 São Gonçalo,Estrela do Norte,4432
 São Gonçalo,Fazenda dos Mineiros,5881
 São Gonçalo,Galo Branco,12770
 São Gonçalo,Gebara,489
-São Gonçalo,Gradim,12015
+São Gonçalo,Gradim,11870
 São Gonçalo,Guarani,3162
 São Gonçalo,Guaxindiba,4582
 São Gonçalo,Ieda,4300
 São Gonçalo,Ipiíba,1823
-São Gonçalo,Itaóca,4275
+São Gonçalo,Itaóca,3531
 São Gonçalo,Itaúna,15737
 São Gonçalo,Jardim Alcântara,4735
 São Gonçalo,Jardim Amendoeira,1109
 São Gonçalo,Jardim Catarina,66278
 São Gonçalo,Jardim Nova República,6563
-São Gonçalo,Jockey,15196
+São Gonçalo,Jockey,14930
 São Gonçalo,Lagoinha,3423
 São Gonçalo,Lagoinha II,4424
 São Gonçalo,Laranjal,19869
@@ -556,7 +557,7 @@ São Gonçalo,Mangueira,2772
 São Gonçalo,Marambaia,6808
 São Gonçalo,Maria Paula,12910
 São Gonçalo,Maria Paula II,4819
-São Gonçalo,Miriambi,6836
+São Gonçalo,Miriambi,6559
 São Gonçalo,Monjolo,9949
 São Gonçalo,Morro do Castro,4956
 São Gonçalo,Mutondo,20077
@@ -564,14 +565,14 @@ São Gonçalo,Mutuaguaçu,4616
 São Gonçalo,Mutuapira,8698
 São Gonçalo,Mutuá,9620
 São Gonçalo,Neves,8607
-São Gonçalo,Neves II,4014
+São Gonçalo,Neves II,3721
 São Gonçalo,Nova Cidade,10656
 São Gonçalo,Novo México,2895
 São Gonçalo,Pacheco,7117
 São Gonçalo,Pacheco II,5631
 São Gonçalo,Palmeiras,5204
 São Gonçalo,Parada Quarenta,2704
-São Gonçalo,Paraíso,5725
+São Gonçalo,Paraíso,5313
 São Gonçalo,Patronato,3876
 São Gonçalo,Pedro Alcântara,13378
 São Gonçalo,Pita,6064
@@ -579,9 +580,9 @@ São Gonçalo,Pita II,5576
 São Gonçalo,Porto Novo,13697
 São Gonçalo,Porto Velho,9981
 São Gonçalo,Porto da Madame,6346
-São Gonçalo,Porto da Pedra,11469
+São Gonçalo,Porto da Pedra,10642
 São Gonçalo,Porto da Rosa,20756
-São Gonçalo,Raul Veiga,5925
+São Gonçalo,Raul Veiga,5639
 São Gonçalo,Raul Veiga II,2756
 São Gonçalo,Recanto das Acácias,2643
 São Gonçalo,Rio do Ouro,9322

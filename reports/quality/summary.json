@@ -1,0 +1,176 @@
+{
+  "municipalities": 26,
+  "points": 8650,
+  "municipal_od_max_error": 0,
+  "warnings": [
+    {
+      "kind": "aggregated_workplace_over_20000",
+      "points": [
+        {
+          "id": "WRK_0775",
+          "jobs": 32393
+        },
+        {
+          "id": "WRK_0776",
+          "jobs": 26975
+        },
+        {
+          "id": "WRK_0781",
+          "jobs": 28614
+        },
+        {
+          "id": "WRK_0970",
+          "jobs": 30764
+        },
+        {
+          "id": "WRK_1342",
+          "jobs": 21354
+        },
+        {
+          "id": "WRK_1512",
+          "jobs": 20067
+        },
+        {
+          "id": "WRK_1542",
+          "jobs": 20671
+        },
+        {
+          "id": "WRK_1630",
+          "jobs": 27876
+        },
+        {
+          "id": "WRK_1642",
+          "jobs": 32078
+        },
+        {
+          "id": "WRK_1643",
+          "jobs": 26522
+        },
+        {
+          "id": "WRK_1655",
+          "jobs": 31819
+        },
+        {
+          "id": "WRK_1666",
+          "jobs": 46612
+        },
+        {
+          "id": "WRK_1677",
+          "jobs": 21548
+        },
+        {
+          "id": "WRK_1682",
+          "jobs": 101484
+        },
+        {
+          "id": "WRK_1683",
+          "jobs": 31328
+        },
+        {
+          "id": "WRK_1690",
+          "jobs": 30649
+        },
+        {
+          "id": "WRK_1692",
+          "jobs": 27009
+        },
+        {
+          "id": "WRK_1695",
+          "jobs": 21124
+        },
+        {
+          "id": "WRK_1696",
+          "jobs": 24205
+        },
+        {
+          "id": "WRK_1702",
+          "jobs": 32396
+        },
+        {
+          "id": "WRK_1703",
+          "jobs": 44694
+        },
+        {
+          "id": "WRK_1704",
+          "jobs": 36964
+        },
+        {
+          "id": "WRK_1705",
+          "jobs": 24772
+        },
+        {
+          "id": "WRK_1706",
+          "jobs": 125331
+        },
+        {
+          "id": "WRK_1707",
+          "jobs": 165844
+        },
+        {
+          "id": "WRK_1717",
+          "jobs": 126656
+        },
+        {
+          "id": "WRK_1718",
+          "jobs": 123345
+        },
+        {
+          "id": "WRK_1862",
+          "jobs": 22088
+        }
+      ],
+      "meaning": "Aggregates multiple addresses; not verified single-building capacities. Inspect workplace_placement.csv."
+    },
+    {
+      "kind": "long_road_connectors",
+      "points": 26,
+      "max_m": 15074.718564062092
+    },
+    {
+      "kind": "road_trips_over_two_hours",
+      "commuters": 1
+    }
+  ],
+  "road_distance_weighted_mean_m": 13278.192958107315,
+  "road_seconds_weighted_mean": 855.5505868319411,
+  "intramunicipal_commuters": 3744051,
+  "intermunicipal_commuters": 670586,
+  "resident_count_anchor": "Census 2022 measured age 15\u201359 by tract, calibrated to municipal employed age 14+",
+  "resident_age_variables": [
+    "V01034",
+    "V01035",
+    "V01036",
+    "V01037",
+    "V01038",
+    "V01039"
+  ],
+  "resident_workers_table": 10261,
+  "resident_age_suppressed_population": 80095,
+  "resident_age_suppressed_population_share": 0.006969730511295149,
+  "resident_tract_counts_are_employed_counts": false,
+  "partial_municipality_coverage": "share of age 15\u201359 population; not observed employment coverage",
+  "resident_age_points": 6657,
+  "resident_age_sectors": 25554,
+  "population": 11491836,
+  "commuters": 4414637,
+  "employed_pnad_calibrated": 5519167,
+  "maximum_jobs_at_one_point": 165844,
+  "method": "RAIS2024 CEP/activity+CNEFE; Census2022 containment/2010 OD prior; exact municipal and point margins; road-time gravity",
+  "configuration": {
+    "schema_version": 1,
+    "version": "2.2.0",
+    "seed": 20260916,
+    "workplace_grid_m": 1500,
+    "maximum_workplace_points": 2400,
+    "within_od_nearest_workplaces": 10,
+    "within_od_largest_workplaces": 6,
+    "within_od_nearest_origins_per_workplace": 24,
+    "gravity_decay_seconds": 2400,
+    "road_connector_speed_kmh": 20,
+    "informal_activity_shares_status": "PNAD 2026Q2 metropolitan microdata, weighted informal broad activity groups. Fine splits within broad groups use RAIS formal composition as an explicit proxy.",
+    "od_reference": "Census 2022 municipal containment + historical 2010 sampled destination structure; not an observed 2022 pair matrix",
+    "zero_pair_smoothing_share": 0.001
+  },
+  "metropolitan_informality_share": 0.37799999999999995,
+  "pops": 402028
+}

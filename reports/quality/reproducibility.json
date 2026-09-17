@@ -1,0 +1,19 @@
+{
+  "code_and_config_sha256": {
+    "quality_pipeline.py": "7834e7b619595b0d51770e45028dc09743525a047b5cfe1272750654f533521e",
+    "quality_placement.py": "992a25091b80db06c45ad53947b2f92d435f382d4b6f2b54294518f44e06a9f8",
+    "quality_od.py": "4687ee80b8980318a8858a6f9681da6d1a631135cc33869d4da208c464b14742",
+    "quality_pnad.py": "86753006c163b75c07c538627dbd80d8b026da5354c2c11dc5d4574a3681586c",
+    "quality_validation.py": "bef5d525315fa5925b8903b0e52022c69ebda408b7f75b1427c318aacb8e1712",
+    "quality_config.json": "f5efb59e91de2fe487690043f4e0ee22848c2865161df2953230901bf91ba6c6",
+    "prepare_quality_sources.py": "0fbe4a5f68bd20c6a647c58833fff9378ec8d4a77c7c42e3bb026bacf81eb365",
+    "road_router.py": "88888ab32bc9b9241a450cd345221530ed51bf0f9650789ef53950ca1e27149e"
+  },
+  "inputs_sha256": {
+    "data/quality_baseline/demand_data.json": "6ce285456e7b90fe70a95f968c2b36d4d75c2491ae5f5d422cdb34171c8be12e",
+    "data/quality_baseline/demand_metadata.json": "8de0a6f65f0b67fc434bf78f57c4f42c4fba35870e39c6e070e1046f7f32858c",
+    "data/census_allocation.csv": "992c6389cd2cfafeb1633589379104b20bbce6a94ec65779517c261b146ffcc1",
+    "data/quality_prepared/cnefe_units.parquet": "c5b76e38e74f5b83fd422eea428f0f7a8c70818d2aa4f7cb360d630ce2978d6f",
+    "data/quality_prepared/rais_postal_activity.parquet": "54fe3bfb9c33d8ae0798bb4fa99aa2ea70f8ea550412130fe176d5e1d58daf2d"
+  }
+}

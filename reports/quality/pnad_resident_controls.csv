@@ -1,0 +1,4 @@
+stratum,census_population_2022,pnad_occupied_over_all_age_population,census_employed_2022_covered,calibrated_employed,factor_over_census
+capital,6211223,0.4976992726732967,2747323,3091321,1.125212070076944
+metropolitan_remainder,5268127,0.4597205451095394,2082684,2421866,1.1628581196187229
+state_proxy,12486,0.4789009969858567,5399,5980,1.107612520837192

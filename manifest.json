@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "subway-builder": "1.7.0"
+    "subway-builder": ">=1.7.0 <1.7.2"
   }
 }

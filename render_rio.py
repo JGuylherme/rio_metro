@@ -19,8 +19,39 @@ def foundation(g,height):
     return int(max(10,min(80,.25*height*(height/max(width,.5))**.25)))
 
 
+def depth_contours(water, z, west, north, sx, sy):
+    """Continuous visual isobands; the measured collision grid stays separate."""
+    import contourpy
+    from scipy.ndimage import gaussian_filter
+    from shapely.geometry import Polygon
+    from shapely import make_valid
+    # Land/missing soundings use the same explicit shallow fallback as collisions.
+    values=np.where(np.isfinite(z) & (z < -1),z,-2.)
+    values=gaussian_filter(values.astype(float),sigma=1,mode='nearest')
+    ny,nx=values.shape
+    generator=contourpy.contour_generator(x=west+np.arange(nx)*sx,
+        y=north-np.arange(ny)*sy,z=values,fill_type='OuterOffset')
+    levels=np.arange(math.floor(float(values.min())/2)*2-2,2,2)
+    features=[];covered=[]
+    for low,high in zip(levels[:-1],levels[1:]):
+        points,offsets=generator.filled(low,high)
+        for coords,rings in zip(points,offsets):
+            polygon=Polygon(coords[rings[0]:rings[1]],
+                [coords[a:b] for a,b in zip(rings[1:-1],rings[2:])])
+            if not polygon.is_valid:polygon=make_valid(polygon)
+            clipped=polygon.intersection(water)
+            for part in util.parts(clipped,'Polygon'):
+                if part.area<1e-12:continue
+                covered.append(part)
+                features.append(util.feature(part,{'kind':'ocean_foundation','depth_min':min(-2.,float((low+high)/2))}))
+    # Retain water beyond DEM coverage, including small inland water polygons.
+    for part in util.parts(water.difference(unary_union(covered)),'Polygon'):
+        if part.area>1e-12:features.append(util.feature(part,{'kind':'ocean_foundation','depth_min':-2.}))
+    return features
+
+
 def bathymetry(surfaces,force=False):
-    target=DATA/'bathymetry_features.pkl'
+    target=DATA/'bathymetry_contours_v1.pkl'
     if not force and target.exists() and (OUT/'ocean_depth_index.json.gz').exists():return pickle.loads(target.read_bytes())
     water=unary_union([shape(f['geometry']) for layer,f in surfaces if layer=='water'])
     ready=prep(water)
@@ -66,10 +97,13 @@ def bathymetry(surfaces,force=False):
     temporary=OUT/'ocean_depth_index.json.gz.tmp'
     with gzip.open(temporary,'wt',encoding='utf8') as f:json.dump(index,f,separators=(',',':'))
     temporary.replace(OUT/'ocean_depth_index.json.gz')
+    features=depth_contours(water,z,west,north,sx,sy)
     target.write_bytes(pickle.dumps(features,protocol=5))
     util.save(DATA/'bathymetry_audit.json',{'source':'GMRT GridServer','grid_size':[int(nx),int(ny)],
         'source_spacing_degrees':[float(sx),float(sy)],'sea_surface_m':0,
-        'coastal_fallback_cells':fallback,'fallback_depth_m':-2,'collision_entries':len(entries)})
+        'coastal_fallback_cells':fallback,'fallback_depth_m':-2,'collision_entries':len(entries),
+        'visual_method':'2 m interpolated isobands; Gaussian sigma=1 source pixel; clipped to OSM water',
+        'visual_features':len(features),'collision_method':'unchanged nearest-sample grid; visual smoothing does not change tunnel collisions'})
     return features
 
 

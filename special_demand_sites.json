@@ -1,0 +1,898 @@
+{
+  "schema_version": 1,
+  "sites": [
+    {
+      "id": "AIR_GIG",
+      "name": "Galeão — terminal de passageiros",
+      "category": "airports",
+      "location": [
+        -43.246262,
+        -22.814449
+      ],
+      "source_count": 14491894,
+      "source_year": 2024,
+      "source_url": "https://www.riogaleao.com/en/corporate/who-we-are/airport-figures/",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "landside_share_assumed": 0.8,
+        "two_legs_per_pop": 0.5
+      },
+      "assumptions": "Annual arrivals plus departures / 366 / 2. A modeled 20% connection exclusion; not measured transfer or transit share. Origins are a residential proxy for passengers and visitor accommodation.",
+      "max_distance_m": 100000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "location_source": "https://www.openstreetmap.org/way/148284666"
+    },
+    {
+      "id": "PAR_LAGE",
+      "name": "Parque Lage — acesso",
+      "category": "parks",
+      "location": [
+        -43.2111,
+        -22.9598
+      ],
+      "source_count": 1294710,
+      "source_year": 2024,
+      "source_url": "https://www.gov.br/icmbio/pt-br/centrais-de-conteudo/publicacoes/editais-diversos/editais-diversos-2025-1/copy_of_SEI_022200762_Edital_de_Credenciamento.pdf",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Visits / 366; each visit becomes one outward-and-return equivalent. No separate total for Tijuca Park is added.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance"
+    },
+    {
+      "id": "PAR_FLORESTA",
+      "name": "Floresta da Tijuca — acesso Alto da Boa Vista",
+      "category": "parks",
+      "location": [
+        -43.273006,
+        -22.961067
+      ],
+      "source_count": 373941,
+      "source_year": 2024,
+      "source_url": "https://www.gov.br/icmbio/pt-br/centrais-de-conteudo/publicacoes/editais-diversos/editais-diversos-2025-1/copy_of_SEI_022200762_Edital_de_Credenciamento.pdf",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Sector visits / 366; represented at the access area, not throughout protected forest.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "location_source": "https://www.openstreetmap.org/way/204092749"
+    },
+    {
+      "id": "ENT_CORCOVADO",
+      "name": "Corcovado — acesso pelo Cosme Velho",
+      "category": "entertainment",
+      "location": [
+        -43.198512,
+        -22.940642
+      ],
+      "source_count": 2389496,
+      "source_year": 2024,
+      "source_url": "https://www.gov.br/icmbio/pt-br/centrais-de-conteudo/publicacoes/editais-diversos/editais-diversos-2025-1/copy_of_SEI_022200762_Edital_de_Credenciamento.pdf",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "cosme_velho_share_assumed": 0.5
+      },
+      "assumptions": "Visits / 366; 50% allocated to this access as a scenario assumption. Other access routes are omitted; no duplicate park-wide total.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "location_source": "https://www.openstreetmap.org/way/59988621"
+    },
+    {
+      "id": "ENT_AMANHA",
+      "name": "Museu do Amanhã",
+      "category": "entertainment",
+      "location": [
+        -43.179405,
+        -22.894068
+      ],
+      "source_count": 836000,
+      "source_year": 2024,
+      "source_url": "https://acervo.museudoamanha.org.br/conheca-nosso-acervo/bibliografico/5103/relatorio-institucional-2024",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Approximately 836,000 visits / 366; rounded institutional total, not exact daily attendance.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "location_source": "https://www.openstreetmap.org/way/372720167"
+    },
+    {
+      "id": "HOS_HUAP",
+      "name": "Hospital Universitário Antônio Pedro — pacientes e acompanhantes",
+      "category": "hospitals",
+      "location": [
+        -43.111818,
+        -22.895611
+      ],
+      "source_count": 142000,
+      "source_year": 2019,
+      "source_url": "https://www.uff.br/informe/huap-realizou-142-mil-consultas-ambulatoriais-em-2019/",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "patient_and_companion_factor_assumed": 1.5
+      },
+      "assumptions": "Outpatient consultations / 365 plus 0.5 companion per consultation. Historical 2019 baseline, not projected. Excludes employee counts, procedures and inpatient visitor totals.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "origin_municipalities": [
+        "3303302",
+        "3304904",
+        "3301900",
+        "3302270",
+        "3302700",
+        "3304300"
+      ],
+      "location_source": "https://www.openstreetmap.org/way/119524771"
+    },
+    {
+      "id": "UNI_FUNDAO",
+      "name": "UFRJ — Cidade Universitária",
+      "category": "universities",
+      "location": [
+        -43.2307,
+        -22.861
+      ],
+      "source_count": 50935,
+      "source_year": "2025/2",
+      "source_url": "https://ufrj.br/acesso-a-informacao/institucional/fatos-e-numeros/",
+      "basis": "enrollment",
+      "days_per_year": 366,
+      "factors": {
+        "in_map_share_assumed": 0.8,
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.75
+      },
+      "assumptions": "Institutional undergraduate total includes active and paused enrollment. All three factors are explicit modeling assumptions; campus shares sum to one across included sites. Excludes staff and postgraduates.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance",
+      "allocation_group": "UFRJ_undergraduates_2025_2"
+    },
+    {
+      "id": "UNI_PRAIA",
+      "name": "UFRJ — Praia Vermelha",
+      "category": "universities",
+      "location": [
+        -43.176,
+        -22.953
+      ],
+      "source_count": 50935,
+      "source_year": "2025/2",
+      "source_url": "https://ufrj.br/acesso-a-informacao/institucional/fatos-e-numeros/",
+      "basis": "enrollment",
+      "days_per_year": 366,
+      "factors": {
+        "in_map_share_assumed": 0.8,
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.2
+      },
+      "assumptions": "Institutional undergraduate total includes active and paused enrollment. All three factors are explicit modeling assumptions; campus shares sum to one across included sites. Excludes staff and postgraduates.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance",
+      "allocation_group": "UFRJ_undergraduates_2025_2"
+    },
+    {
+      "id": "UNI_CENTRO",
+      "name": "UFRJ — Centro / IFCS",
+      "category": "universities",
+      "location": [
+        -43.1813,
+        -22.9054
+      ],
+      "source_count": 50935,
+      "source_year": "2025/2",
+      "source_url": "https://ufrj.br/acesso-a-informacao/institucional/fatos-e-numeros/",
+      "basis": "enrollment",
+      "days_per_year": 366,
+      "factors": {
+        "in_map_share_assumed": 0.8,
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.05
+      },
+      "assumptions": "Institutional undergraduate total includes active and paused enrollment. All three factors are explicit modeling assumptions; campus shares sum to one across included sites. Excludes staff and postgraduates.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance",
+      "allocation_group": "UFRJ_undergraduates_2025_2"
+    },
+    {
+      "id": "SCH_CAP_UERJ",
+      "name": "CAp-Uerj — educação básica",
+      "category": "schools",
+      "location": [
+        -43.211328,
+        -22.919427
+      ],
+      "source_count": 1000,
+      "source_year": 2022,
+      "source_url": "https://www.uerj.br/noticia/cap-uerj-celebra-65-anos-e-anuncia-expansao-de-atividades-com-criacao-de-programa-de-educacao-basica-para-adultos/",
+      "basis": "enrollment",
+      "days_per_year": 366,
+      "factors": {
+        "attendance_assumed": 0.9
+      },
+      "assumptions": "Approximately 1,000 pupils; 90% attendance on a school day assumed. This is one institution, not all metropolitan schoolchildren. Staff excluded.",
+      "max_distance_m": 25000,
+      "decay_seconds": 1200,
+      "location_method": "Coordinates of the embedded map linked by the school for Rua Barão de Itapagipe, 96",
+      "origin_municipalities": [
+        "3304557"
+      ],
+      "location_source": "https://www.cap.uerj.br/"
+    },
+    {
+      "id": "FER_XV_NIT",
+      "name": "Praça XV — acesso às barcas Niterói",
+      "category": "ferries",
+      "location": [
+        -43.1731,
+        -22.9025
+      ],
+      "source_count": 10366040,
+      "source_year": 2024,
+      "source_url": "https://www.agetransp.rj.gov.br/concessionarias/barcas/concessionaria-em-numeros/tabela-1.1",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "non_work_share_assumed": 0.2,
+        "two_legs_per_pop": 0.5,
+        "terminal_share_assumed": 0.5
+      },
+      "assumptions": "Line boardings / 366 / 2, retaining an assumed 20% non-work share, split equally between terminals. Local feeder trips only; no simulated ferry crossing. Non-work share is not observed.",
+      "max_distance_m": 35000,
+      "decay_seconds": 1500,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance",
+      "origin_municipalities": [
+        "3304557"
+      ]
+    },
+    {
+      "id": "FER_ARARIBOIA",
+      "name": "Arariboia — acesso às barcas",
+      "category": "ferries",
+      "location": [
+        -43.124523,
+        -22.8936
+      ],
+      "source_count": 10366040,
+      "source_year": 2024,
+      "source_url": "https://www.agetransp.rj.gov.br/concessionarias/barcas/concessionaria-em-numeros/tabela-1.1",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "non_work_share_assumed": 0.2,
+        "two_legs_per_pop": 0.5,
+        "terminal_share_assumed": 0.5
+      },
+      "assumptions": "Line boardings / 366 / 2, retaining an assumed 20% non-work share, split equally between terminals. Local feeder trips only; no simulated ferry crossing. Non-work share is not observed.",
+      "max_distance_m": 35000,
+      "decay_seconds": 1500,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "origin_municipalities": [
+        "3303302",
+        "3304904"
+      ],
+      "location_source": "https://www.openstreetmap.org/way/171108666"
+    },
+    {
+      "id": "FER_XV_CHA",
+      "name": "Praça XV — acesso às barcas Charitas",
+      "category": "ferries",
+      "location": [
+        -43.1731,
+        -22.9025
+      ],
+      "source_count": 878029,
+      "source_year": 2024,
+      "source_url": "https://www.agetransp.rj.gov.br/concessionarias/barcas/concessionaria-em-numeros/tabela-1.1",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "non_work_share_assumed": 0.2,
+        "two_legs_per_pop": 0.5,
+        "terminal_share_assumed": 0.5
+      },
+      "assumptions": "Line boardings / 366 / 2, retaining an assumed 20% non-work share, split equally between terminals. Local feeder trips only; no simulated ferry crossing. Non-work share is not observed.",
+      "max_distance_m": 35000,
+      "decay_seconds": 1500,
+      "location_method": "Manually selected access point; checked against local OSM and road graph, not a surveyed entrance",
+      "origin_municipalities": [
+        "3304557"
+      ]
+    },
+    {
+      "id": "FER_CHARITAS",
+      "name": "Charitas — acesso às barcas",
+      "category": "ferries",
+      "location": [
+        -43.09928,
+        -22.932406
+      ],
+      "source_count": 878029,
+      "source_year": 2024,
+      "source_url": "https://www.agetransp.rj.gov.br/concessionarias/barcas/concessionaria-em-numeros/tabela-1.1",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "non_work_share_assumed": 0.2,
+        "two_legs_per_pop": 0.5,
+        "terminal_share_assumed": 0.5
+      },
+      "assumptions": "Line boardings / 366 / 2, retaining an assumed 20% non-work share, split equally between terminals. Local feeder trips only; no simulated ferry crossing. Non-work share is not observed.",
+      "max_distance_m": 35000,
+      "decay_seconds": 1500,
+      "location_method": "Representative point of mapped facility, or road access for airport/park; local OSM snapshot",
+      "origin_municipalities": [
+        "3303302",
+        "3304904"
+      ],
+      "location_source": "https://www.openstreetmap.org/way/119663567"
+    },
+    {
+      "id": "AIR_SDU",
+      "name": "Santos Dumont — terminal de passageiros",
+      "category": "airports",
+      "location": [
+        -43.1669,
+        -22.91
+      ],
+      "source_count": 4900000,
+      "source_year": 2025,
+      "source_url": "https://www.gov.br/portos-e-aeroportos/pt-br/assuntos/noticias/2025/11/brasil-ultrapassa-marca-de-100-milhoes-de-passageiros-nos-aeroportos-do-pais-no-acumulado-do-ano",
+      "basis": "period",
+      "factors": {
+        "landside_share_assumed": 0.95,
+        "two_legs_per_pop": 0.5
+      },
+      "assumptions": "Rounded 4.9 million airport passenger movements in January–October 2025 / 304 observed days / 2. Not the 6.5-million operational cap and not a full-year total. Assumed 5% transfer exclusion; calendar-average demand, no seasonal forecast.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected road access; not a surveyed entrance",
+      "period_start": "2025-01-01",
+      "period_end": "2025-10-31"
+    },
+    {
+      "id": "UNI_UFF_GRAGOATA",
+      "name": "UFF — Gragoatá",
+      "category": "universities",
+      "location": [
+        -43.133421,
+        -22.89846
+      ],
+      "source_count": 36314,
+      "source_year": "2024-04-27",
+      "source_url": "https://cpa.uff.br/wp-content/uploads/sites/790/2024/09/Relatorio_AutoavaliacaoUFF_2024-INTEGRAL_2021-2022-2023.pdf",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.45
+      },
+      "assumptions": "Figure 12, printed p.46 (PDF p.47): 36,314 undergraduate registrations in Niterói; excludes separately reported distance education and other municipalities. Campus shares are assumptions, not measured campus enrollment. Shares sum to 90%; remaining 10% in dispersed units omitted. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/126312683",
+      "allocation_group": "UFF_Niteroi_undergraduates_2024"
+    },
+    {
+      "id": "UNI_UFF_PRAIA_VERMELHA",
+      "name": "UFF — Praia Vermelha",
+      "category": "universities",
+      "location": [
+        -43.133398,
+        -22.905695
+      ],
+      "source_count": 36314,
+      "source_year": "2024-04-27",
+      "source_url": "https://cpa.uff.br/wp-content/uploads/sites/790/2024/09/Relatorio_AutoavaliacaoUFF_2024-INTEGRAL_2021-2022-2023.pdf",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.3
+      },
+      "assumptions": "Figure 12, printed p.46 (PDF p.47): 36,314 undergraduate registrations in Niterói; excludes separately reported distance education and other municipalities. Campus shares are assumptions, not measured campus enrollment. Shares sum to 90%; remaining 10% in dispersed units omitted. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/126322094",
+      "allocation_group": "UFF_Niteroi_undergraduates_2024"
+    },
+    {
+      "id": "UNI_UFF_VALONGUINHO",
+      "name": "UFF — Valonguinho",
+      "category": "universities",
+      "location": [
+        -43.125425,
+        -22.897657
+      ],
+      "source_count": 36314,
+      "source_year": "2024-04-27",
+      "source_url": "https://cpa.uff.br/wp-content/uploads/sites/790/2024/09/Relatorio_AutoavaliacaoUFF_2024-INTEGRAL_2021-2022-2023.pdf",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.15
+      },
+      "assumptions": "Figure 12, printed p.46 (PDF p.47): 36,314 undergraduate registrations in Niterói; excludes separately reported distance education and other municipalities. Campus shares are assumptions, not measured campus enrollment. Shares sum to 90%; remaining 10% in dispersed units omitted. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/126308760",
+      "allocation_group": "UFF_Niteroi_undergraduates_2024"
+    },
+    {
+      "id": "UNI_UERJ_MARACANA",
+      "name": "Uerj — Maracanã",
+      "category": "universities",
+      "location": [
+        -43.235967,
+        -22.912201
+      ],
+      "source_count": 25000,
+      "source_year": 2019,
+      "source_url": "https://www.uerj.br/noticia/9324/",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.75
+      },
+      "assumptions": "Historical approximate 25,000 in-person undergraduates, excluding 8,000 distance students, postgraduates and CAp pupils. Assumed campus shares cover 87% of this one institutional total; other units omitted. No projection to 2026. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/33746955",
+      "allocation_group": "UERJ_in_person_undergraduates_2019"
+    },
+    {
+      "id": "UNI_UERJ_FFP",
+      "name": "Uerj — FFP — São Gonçalo",
+      "category": "universities",
+      "location": [
+        -43.073209,
+        -22.832594
+      ],
+      "source_count": 25000,
+      "source_year": 2019,
+      "source_url": "https://www.uerj.br/noticia/9324/",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.08
+      },
+      "assumptions": "Historical approximate 25,000 in-person undergraduates, excluding 8,000 distance students, postgraduates and CAp pupils. Assumed campus shares cover 87% of this one institutional total; other units omitted. No projection to 2026. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/182856721",
+      "allocation_group": "UERJ_in_person_undergraduates_2019"
+    },
+    {
+      "id": "UNI_UERJ_FEBF",
+      "name": "Uerj — FEBF — Duque de Caxias",
+      "category": "universities",
+      "location": [
+        -43.296998,
+        -22.775477
+      ],
+      "source_count": 25000,
+      "source_year": 2019,
+      "source_url": "https://www.uerj.br/noticia/9324/",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.04
+      },
+      "assumptions": "Historical approximate 25,000 in-person undergraduates, excluding 8,000 distance students, postgraduates and CAp pupils. Assumed campus shares cover 87% of this one institutional total; other units omitted. No projection to 2026. Staff excluded.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/168288311",
+      "allocation_group": "UERJ_in_person_undergraduates_2019"
+    },
+    {
+      "id": "UNI_PUC_GAVEA",
+      "name": "PUC-Rio — Gávea",
+      "category": "universities",
+      "location": [
+        -43.233,
+        -22.9792
+      ],
+      "source_count": 10900,
+      "source_year": 2023,
+      "source_url": "https://www.puc-rio.br/sobrepuc/cpa/download/PUC-Rio_2024-ref2021-a-2023-PUC-Rio-RELATORIO-CPA.pdf",
+      "basis": "enrollment",
+      "factors": {
+        "active_daily_attendance_assumed": 0.7,
+        "campus_share_assumed": 0.95
+      },
+      "assumptions": "CPA report March 2024, p.6: approximately 10,900 undergraduate and stricto-sensu postgraduate students in 2023. Assumed 95% campus share and 70% attendance; other locations and staff omitted.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected road access; not a surveyed entrance",
+      "allocation_group": "PUC_students_2023"
+    },
+    {
+      "id": "HOS_BONSUCESSO",
+      "name": "Hospital Federal de Bonsucesso — visitantes",
+      "category": "hospitals",
+      "location": [
+        -43.2486,
+        -22.8654
+      ],
+      "source_count": 526,
+      "source_year": 2019,
+      "source_url": "https://www.saude.rj.gov.br/comum/code/MostrarArquivo.php?C=MjY5NTk%2C",
+      "basis": "beds",
+      "factors": {
+        "occupied_share_assumed": 0.8,
+        "visitors_per_occupied_bed_per_day_assumed": 1
+      },
+      "assumptions": "SES-RJ process SEI-08/001/006114/2019, Annex 1: hospital plus critical beds. Historical installed capacity, not current occupied beds or measured trips. Models one visitor per occupied bed per day at assumed 80% occupancy; no outpatient demand, patients or staff added. Large public hospital selection, not a verified citywide top-five ranking.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected road access; not a surveyed entrance"
+    },
+    {
+      "id": "HOS_SERVIDORES",
+      "name": "Hospital Federal dos Servidores do Estado — visitantes",
+      "category": "hospitals",
+      "location": [
+        -43.1945,
+        -22.8965
+      ],
+      "source_count": 420,
+      "source_year": 2019,
+      "source_url": "https://www.saude.rj.gov.br/comum/code/MostrarArquivo.php?C=MjY5NTk%2C",
+      "basis": "beds",
+      "factors": {
+        "occupied_share_assumed": 0.8,
+        "visitors_per_occupied_bed_per_day_assumed": 1
+      },
+      "assumptions": "SES-RJ process SEI-08/001/006114/2019, Annex 1: hospital plus critical beds. Historical installed capacity, not current occupied beds or measured trips. Models one visitor per occupied bed per day at assumed 80% occupancy; no outpatient demand, patients or staff added. Large public hospital selection, not a verified citywide top-five ranking.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Manually selected road access; not a surveyed entrance"
+    },
+    {
+      "id": "HOS_PEDRO_ERNESTO",
+      "name": "Hospital Universitário Pedro Ernesto — visitantes",
+      "category": "hospitals",
+      "location": [
+        -43.237395,
+        -22.914939
+      ],
+      "source_count": 415,
+      "source_year": 2019,
+      "source_url": "https://www.saude.rj.gov.br/comum/code/MostrarArquivo.php?C=MjY5NTk%2C",
+      "basis": "beds",
+      "factors": {
+        "occupied_share_assumed": 0.8,
+        "visitors_per_occupied_bed_per_day_assumed": 1
+      },
+      "assumptions": "SES-RJ process SEI-08/001/006114/2019, Annex 1: hospital plus critical beds. Historical installed capacity, not current occupied beds or measured trips. Models one visitor per occupied bed per day at assumed 80% occupancy; no outpatient demand, patients or staff added. Large public hospital selection, not a verified citywide top-five ranking.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/259083008"
+    },
+    {
+      "id": "HOS_GETULIO_VARGAS",
+      "name": "Hospital Estadual Getúlio Vargas — visitantes",
+      "category": "hospitals",
+      "location": [
+        -43.284981,
+        -22.83897
+      ],
+      "source_count": 388,
+      "source_year": 2019,
+      "source_url": "https://www.saude.rj.gov.br/comum/code/MostrarArquivo.php?C=MjY5NTk%2C",
+      "basis": "beds",
+      "factors": {
+        "occupied_share_assumed": 0.8,
+        "visitors_per_occupied_bed_per_day_assumed": 1
+      },
+      "assumptions": "SES-RJ process SEI-08/001/006114/2019, Annex 1: hospital plus critical beds. Historical installed capacity, not current occupied beds or measured trips. Models one visitor per occupied bed per day at assumed 80% occupancy; no outpatient demand, patients or staff added. Large public hospital selection, not a verified citywide top-five ranking.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/405116687"
+    },
+    {
+      "id": "HOS_SOUZA_AGUIAR",
+      "name": "Hospital Municipal Souza Aguiar — visitantes",
+      "category": "hospitals",
+      "location": [
+        -43.190336,
+        -22.908739
+      ],
+      "source_count": 389,
+      "source_year": 2025,
+      "source_url": "https://saude.prefeitura.rio/noticias/hospital-souza-aguiar-inaugura-novo-setor-de-pediatria/",
+      "basis": "beds",
+      "factors": {
+        "occupied_share_assumed": 0.8,
+        "visitors_per_occupied_bed_per_day_assumed": 1
+      },
+      "assumptions": "SMS report dated 24 December 2025: 389 beds. Models one visitor per occupied bed per day at assumed 80% occupancy; not measured visitor counts. No outpatient demand, patients or staff added. Large public hospital selection, not a verified citywide top-five ranking.",
+      "max_distance_m": 60000,
+      "decay_seconds": 2400,
+      "location_method": "Representative point of facility in local OpenStreetMap snapshot; routed with road access connector",
+      "location_source": "https://www.openstreetmap.org/way/327266833"
+    },
+    {
+      "id": "ENT_COPACABANA",
+      "name": "Praia de Copacabana",
+      "category": "entertainment",
+      "feature_type": "beach",
+      "location": [
+        -43.184487,
+        -22.975047
+      ],
+      "source_count": 12649006,
+      "source_year": 2023,
+      "source_url": "https://siurb.rio/portal/sharing/rest/content/items/c55ccc425c814f0fae20d990bf1313f1/data",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "beach_share_assumed": 0.85
+      },
+      "assumptions": "See source_notes.beaches_2023. Annual group total / 365 times explicit beach_share_assumed; shares within each allocation_group sum to one.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "allocation_group": "beach_copa_leme_2023",
+      "allocation_share_key": "beach_share_assumed"
+    },
+    {
+      "id": "ENT_LEME",
+      "name": "Praia do Leme",
+      "category": "entertainment",
+      "feature_type": "beach",
+      "location": [
+        -43.169857,
+        -22.964447
+      ],
+      "source_count": 12649006,
+      "source_year": 2023,
+      "source_url": "https://siurb.rio/portal/sharing/rest/content/items/c55ccc425c814f0fae20d990bf1313f1/data",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "beach_share_assumed": 0.15
+      },
+      "assumptions": "See source_notes.beaches_2023. Annual group total / 365 times explicit beach_share_assumed; shares within each allocation_group sum to one.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "allocation_group": "beach_copa_leme_2023",
+      "allocation_share_key": "beach_share_assumed"
+    },
+    {
+      "id": "ENT_IPANEMA",
+      "name": "Praia de Ipanema",
+      "category": "entertainment",
+      "feature_type": "beach",
+      "location": [
+        -43.202126,
+        -22.987311
+      ],
+      "source_count": 10920944,
+      "source_year": 2023,
+      "source_url": "https://siurb.rio/portal/sharing/rest/content/items/c55ccc425c814f0fae20d990bf1313f1/data",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "beach_share_assumed": 0.65
+      },
+      "assumptions": "See source_notes.beaches_2023. Annual group total / 365 times explicit beach_share_assumed; shares within each allocation_group sum to one.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "allocation_group": "beach_ipa_leblon_arpex_2023",
+      "allocation_share_key": "beach_share_assumed"
+    },
+    {
+      "id": "ENT_LEBLON",
+      "name": "Praia do Leblon",
+      "category": "entertainment",
+      "feature_type": "beach",
+      "location": [
+        -43.224371,
+        -22.987866
+      ],
+      "source_count": 10920944,
+      "source_year": 2023,
+      "source_url": "https://siurb.rio/portal/sharing/rest/content/items/c55ccc425c814f0fae20d990bf1313f1/data",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "beach_share_assumed": 0.3
+      },
+      "assumptions": "See source_notes.beaches_2023. Annual group total / 365 times explicit beach_share_assumed; shares within each allocation_group sum to one.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "allocation_group": "beach_ipa_leblon_arpex_2023",
+      "allocation_share_key": "beach_share_assumed"
+    },
+    {
+      "id": "ENT_ARPOADOR",
+      "name": "Praia do Arpoador",
+      "category": "entertainment",
+      "feature_type": "beach",
+      "location": [
+        -43.192113,
+        -22.988977
+      ],
+      "source_count": 10920944,
+      "source_year": 2023,
+      "source_url": "https://siurb.rio/portal/sharing/rest/content/items/c55ccc425c814f0fae20d990bf1313f1/data",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "beach_share_assumed": 0.05
+      },
+      "assumptions": "See source_notes.beaches_2023. Annual group total / 365 times explicit beach_share_assumed; shares within each allocation_group sum to one.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "allocation_group": "beach_ipa_leblon_arpex_2023",
+      "allocation_share_key": "beach_share_assumed"
+    },
+    {
+      "id": "ENT_BARRASHOPPING",
+      "name": "BarraShopping",
+      "category": "entertainment",
+      "feature_type": "shopping",
+      "location": [
+        -43.359127,
+        -22.997666
+      ],
+      "source_count": 23200000,
+      "source_year": 2025,
+      "source_url": "https://www.multiplan.com.br/shoppings/barrashopping/",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Operator-reported annual footfall / 365; repeated visits are included. One visit modeled as an outward-and-return equivalent, with residential origins as a proxy. This is visitor activity, not additional retail employees. Connected New York City Center is not added separately to avoid overlapping visitation.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance"
+    },
+    {
+      "id": "ENT_VILLAGEMALL",
+      "name": "VillageMall",
+      "category": "entertainment",
+      "feature_type": "shopping",
+      "location": [
+        -43.351317,
+        -22.998253
+      ],
+      "source_count": 3000000,
+      "source_year": 2025,
+      "source_url": "https://www.multiplan.com.br/shoppings/villagemall/",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Operator-reported annual footfall / 365; repeated visits are included. One visit modeled as an outward-and-return equivalent, with residential origins as a proxy. This is visitor activity, not additional retail employees. Connected New York City Center is not added separately to avoid overlapping visitation.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance"
+    },
+    {
+      "id": "ENT_PARKCAMPOGRANDE",
+      "name": "ParkShoppingCampoGrande",
+      "category": "entertainment",
+      "feature_type": "shopping",
+      "location": [
+        -43.575261,
+        -22.927057
+      ],
+      "source_count": 10100000,
+      "source_year": 2025,
+      "source_url": "https://www.multiplan.com.br/shoppings/parkshoppingcampogrande/",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Operator-reported annual footfall / 365; repeated visits are included. One visit modeled as an outward-and-return equivalent, with residential origins as a proxy. This is visitor activity, not additional retail employees. Connected New York City Center is not added separately to avoid overlapping visitation.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance"
+    },
+    {
+      "id": "ENT_PARKJACAREPAGUA",
+      "name": "ParkJacarepaguá",
+      "category": "entertainment",
+      "feature_type": "shopping",
+      "location": [
+        -43.339736,
+        -22.957382
+      ],
+      "source_count": 9800000,
+      "source_year": 2025,
+      "source_url": "https://www.multiplan.com.br/shoppings/parkjacarepagua/",
+      "basis": "annual",
+      "days_per_year": 365,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Operator-reported annual footfall / 365; repeated visits are included. One visit modeled as an outward-and-return equivalent, with residential origins as a proxy. This is visitor activity, not additional retail employees. Connected New York City Center is not added separately to avoid overlapping visitation.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance"
+    },
+    {
+      "id": "ENT_MARACANA",
+      "name": "Maracanã — público de jogos",
+      "category": "entertainment",
+      "feature_type": "stadium",
+      "location": [
+        -43.230004,
+        -22.912822
+      ],
+      "source_count": 3473045,
+      "source_year": 2024,
+      "source_url": "https://pt.linkedin.com/posts/estadiomaracana_maracan%C3%A3-supera-marca-de-15-milh%C3%B5es-de-torcedores-activity-7364721178076180480-Xnhc",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Stadium operator: 3,473,045 attendees across 73 matches in 2024, divided by 366. Smoothed annual match attendance, not match-day peaks. No overlapping mobile-phone estimate or tour attendance added.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance"
+    },
+    {
+      "id": "ENT_NILTONSANTOS",
+      "name": "Nilton Santos — Libertadores 2024",
+      "category": "entertainment",
+      "feature_type": "stadium",
+      "location": [
+        -43.292518,
+        -22.893033
+      ],
+      "source_count": 266576,
+      "source_year": 2024,
+      "source_url": "https://static.botafogo.com.br/upload/downloads/279dd2a011a44089868b3b87739c330b.pdf",
+      "basis": "annual",
+      "days_per_year": 366,
+      "factors": {
+        "modeled_share": 1
+      },
+      "assumptions": "Botafogo FY2024 report PDF p.71: all eight Libertadores home matches at Nilton Santos, mean attendance 33,322; 8 x 33,322 / 366. Rounded reported average implies an approximate total. This is a documented subset only; other competitions and concerts are not extrapolated.",
+      "max_distance_m": 90000,
+      "decay_seconds": 2400,
+      "location_method": "Representative mapped facility/beach point, checked against local OSM and connected roads; not a surveyed entrance",
+      "observed_scope": "2024 Libertadores matches only; not total annual stadium attendance"
+    }
+  ],
+  "hospital_selection": "Five additional large public hospitals with published bed counts, plus HUAP. A comprehensive same-date CNES ranking (including private and military units) was not available; these are not asserted to be the five largest citywide.",
+  "source_notes": {
+    "beaches_2023": "Municipal Tourism Yearbook 2024 revised edition, base 2023, p.15. Expanded mobile-phone visitor estimates, minimum 30-minute stay, annual sum of monthly counts. Daily trip equivalents are modeled, not measured daily trips or unique annual visitors. Locals and tourists included. Shared beach totals are split only once; residential origins proxy visitors and accommodation."
+  }
+}

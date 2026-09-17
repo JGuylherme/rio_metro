@@ -2,7 +2,7 @@
   "id": "com.guylherme.rio",
   "name": "Rio de Janeiro",
   "description": "Build a rail network across Greater Rio, connecting Rio de Janeiro, the Baixada Fluminense, Niterói, São Gonçalo and the wider metropolitan area.",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "author": { "name": "guylherme" },
   "main": "index.js"
 }

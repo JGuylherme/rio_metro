@@ -1,0 +1,53 @@
+{
+  "source_vintages": {
+    "cnefe": "2022, release 20240910",
+    "rais": "2024 second processing, file 20260518",
+    "census_public": "2022, public layout updated 20260914",
+    "od_historical": "Census 2010 sample, RJ",
+    "pnad": "2026Q2; weights from the downloaded file"
+  },
+  "files": [
+    {
+      "path": "sources/census_car_travel_2022.json",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/10330/periodos/2022/variaveis/13376?localidades=N6%5BN3%5B33%5D%5D&classificacao=537%5Ball%5D%7C2088%5B79197%5D%7C86%5B95251%5D%7C469%5B79176%5D",
+      "bytes": 93883,
+      "sha256": "0b94533eb29bba2312bf2a82925635be21c84af4db8dcef711f1303aaf0a84ae"
+    },
+    {
+      "path": "data/quality_sources/census/33_RJ.zip",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Microdados_e_Areas_de_Ponderacao/Microdados_de_acesso_Publico/csv/33_RJ.zip",
+      "bytes": 58566954,
+      "sha256": "3adda2628ecf098772c2b2f4874daa1dc9d24acbf0443a09d150b6064f967baa"
+    },
+    {
+      "path": "data/quality_sources/census/layout_public.xlsx",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Microdados_e_Areas_de_Ponderacao/Documentacao/Layout%20e%20dicion%C3%A1rio/Layout%20Microdados%20CD2022%20-%20acesso%20P%C3%BAblico.xlsx",
+      "bytes": 37172,
+      "sha256": "cb7d175e7d43dc5040a002ea2e6387c0a5e1199f40bf4aa5577604338420e4a6"
+    },
+    {
+      "path": "data/quality_sources/census/dictionary.pdf",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Microdados_e_Areas_de_Ponderacao/Documentacao/Layout%20e%20dicion%C3%A1rio/Dicion%C3%A1rio%20de%20Vari%C3%A1veis%20-%20Microdados%20CD2022.pdf",
+      "bytes": 543853,
+      "sha256": "62b38bd1e5d66201b9bc546fddeb6672a7372ebb041a0bb6bb48e84300c936c4"
+    },
+    {
+      "path": "data/quality_sources/census/updates_20260914.pdf",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Microdados_e_Areas_de_Ponderacao/1_Atualizacoes_20260914.pdf",
+      "bytes": 32768,
+      "sha256": "7fc2adf74d25dca1a46b61765469bfae2fe7e01160a3c4c924a6397d21ca685c"
+    },
+    {
+      "path": "data/quality_sources/census2010/RJ.zip",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Resultados_Gerais_da_Amostra/Microdados/RJ.zip",
+      "bytes": 63197059,
+      "sha256": "741469bd49ed5cbb9a3df3c78bdd8e62b6d6e73c38cd4482f870419de641e887"
+    },
+    {
+      "path": "data/quality_sources/census2010/Documentacao.zip",
+      "url": "https://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Resultados_Gerais_da_Amostra/Microdados/Documentacao.zip",
+      "bytes": 10711779,
+      "sha256": "f5b8117dadf67efd5b21266f5da77a12011f557b3b23592ff69b8070efb3930d"
+    }
+  ]
+}

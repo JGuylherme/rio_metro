@@ -36,7 +36,7 @@ def main():
     for cls,color,width in [('minor','#b8bdbb',.13),('major','#fffaf0',.45),('highway','#d8a44c',.85)]:
         ax.add_collection(LineCollection([f['geometry']['coordinates'] for f in roads if f['properties']['roadClass']==cls],colors=color,linewidths=width))
     demand=json.loads((OUT/'demand_data.json').read_text())['points']
-    for prefix,color,label in [('RES','#cf634d','Residentes · Censo 2022'),('IND','#7151a4','Empregos industriais · estimados'),('COM','#bc9634','Comércio e serviços · estimados')]:
+    for prefix,color,label in [('RES','#cf634d','Residentes · Censo 2022'),('WRK','#bc9634','Empregos · RAIS/CNEFE + informalidade modelada')]:
         selected=[p for p in demand if p['id'].startswith(prefix)]
         ax.scatter([p['location'][0] for p in selected],[p['location'][1] for p in selected],s=[min(120,max(2,(p['residents'] or p['jobs'])/700)) for p in selected],color=color,alpha=.65,linewidths=0,label=label)
     w,s,e,n=PLAY_BBOX

@@ -1,0 +1,223 @@
+{
+  "version": "2.2.0",
+  "playable_bbox": [
+    -43.9,
+    -23.12,
+    -42.82,
+    -22.57
+  ],
+  "visual_bbox": [
+    -44.06,
+    -23.24,
+    -42.67,
+    -22.4
+  ],
+  "in_game_test": false,
+  "binary": {
+    "buildings": 3432980,
+    "rings": 3436654,
+    "vertices": 19325690,
+    "grid_cells": 198622,
+    "bytes": 479184240
+  },
+  "census": {
+    "source": "IBGE Censo 2022, definitive census-sector geography with attributes",
+    "population": 11491836,
+    "commuters": 4414637,
+    "employment_calibration": "RAIS2024 CEP/activity+CNEFE; Census2022 containment/2010 OD prior; exact municipal and point margins; road-time gravity",
+    "residential_points": 6657,
+    "employment_points": 1993,
+    "pops": 402028,
+    "same_neighborhood_relocations": 0,
+    "neighborhood_totals_preserved": true,
+    "road_access_over_1000m": 18,
+    "max_road_access_m": 15074.718564062092,
+    "partial_boundary_sectors": 108
+  },
+  "quality_pipeline": {
+    "municipal_od_pairs": 676,
+    "maximum_pair_error": 0,
+    "workplace_capacities_exact": true
+  },
+  "roads.geojson": {
+    "features": 167219
+  },
+  "runways_taxiways.geojson": {
+    "features": 655
+  },
+  "water": {
+    "source": "GMRT GridServer",
+    "grid_size": [
+      644,
+      428
+    ],
+    "source_spacing_degrees": [
+      0.00220068283437014,
+      0.0020299968820103056
+    ],
+    "sea_surface_m": 0,
+    "coastal_fallback_cells": 19127,
+    "fallback_depth_m": -2,
+    "collision_entries": 120005,
+    "visual_method": "2 m interpolated isobands; Gaussian sigma=1 source pixel; clipped to OSM water",
+    "visual_features": 3656,
+    "collision_method": "unchanged nearest-sample grid; visual smoothing does not change tunnel collisions"
+  },
+  "tiles": {
+    "RIO.pmtiles": {
+      "tiles": 14391,
+      "features_by_layer": {
+        "city_labels": 391,
+        "scenery_roads": 245789,
+        "airports": 169,
+        "coastline": 7200,
+        "commercial": 19609,
+        "landuse": 138686,
+        "ocean_foundations": 57902,
+        "parks": 138222,
+        "water": 33446,
+        "waterways": 36582,
+        "suburb_labels": 7477,
+        "buildings": 19622110,
+        "neighborhood_labels": 2971
+      },
+      "validation": "all protobuf messages and feature properties; full geometry sampled every 500 tiles and each zoom"
+    },
+    "RIO_foundations.pmtiles": {
+      "tiles": 11797,
+      "features_by_layer": {
+        "ocean_foundations": 57902,
+        "foundations": 14653259
+      },
+      "validation": "all protobuf messages and feature properties; full geometry sampled every 500 tiles and each zoom"
+    }
+  },
+  "building_coverage_samples": {
+    "Japeri": {
+      "sample_bbox": [
+        -43.73,
+        -22.69,
+        -43.58,
+        -22.59
+      ],
+      "buildings": 48483
+    },
+    "Zona Oeste": {
+      "sample_bbox": [
+        -43.75,
+        -22.96,
+        -43.5,
+        -22.83
+      ],
+      "buildings": 399822
+    },
+    "Complexo do Alemão": {
+      "sample_bbox": [
+        -43.3,
+        -22.88,
+        -43.26,
+        -22.84
+      ],
+      "buildings": 54627
+    },
+    "Rocinha": {
+      "sample_bbox": [
+        -43.26,
+        -23.0,
+        -43.23,
+        -22.97
+      ],
+      "buildings": 10801
+    },
+    "São Gonçalo": {
+      "sample_bbox": [
+        -43.09,
+        -22.87,
+        -42.85,
+        -22.75
+      ],
+      "buildings": 320155
+    },
+    "Sul de Niterói": {
+      "sample_bbox": [
+        -43.09,
+        -23.02,
+        -42.95,
+        -22.93
+      ],
+      "buildings": 64545
+    }
+  },
+  "buildings": {
+    "visual_buildings": 3863909,
+    "interactive_buildings": 3432980,
+    "measured_or_tagged_heights": 250028,
+    "estimated_heights": 3613881,
+    "minimum_area_m2": 8
+  },
+  "files": {
+    "config.json": {
+      "bytes": 445,
+      "sha256": "3c7bb82506c532251b111581862478ab4196bfc967114156b45c8086bae299c0"
+    },
+    "demand_data.json": {
+      "bytes": 54691499,
+      "sha256": "fe0439f02a0ab1fd82c22e5b4d61cdf1388bd34916fc14e866934cfafe2acf36"
+    },
+    "roads.geojson": {
+      "bytes": 54366930,
+      "sha256": "f1850f8c4ae90d0cf8a71da45e74c37fd7ab927c5b373b29be5e51ad2e57c57b"
+    },
+    "runways_taxiways.geojson": {
+      "bytes": 746937,
+      "sha256": "5d1f8fc56b2c01709b7871d4c681cb8b509a4891dd79bb54c86699c3ed95e323"
+    },
+    "buildings_index.bin": {
+      "bytes": 479184240,
+      "sha256": "9a02715c3e0eb70c419321df8f201d315f158fd12401658f4f01b56bd0c8d33b"
+    },
+    "RIO.pmtiles": {
+      "bytes": 436396327,
+      "sha256": "a0300d1d3be63edb1dff2dce34f170533492ba16db8b48c8fdb64f7bcf3d9e01"
+    },
+    "RIO_foundations.pmtiles": {
+      "bytes": 224317386,
+      "sha256": "4e7c6fc93a29b2b60ef87a279fb7d70507a884fcd1698e871a554c4376f99719"
+    },
+    "ocean_depth_index.json.gz": {
+      "bytes": 6588978,
+      "sha256": "a7990322290015129caeee404e241d2c7d2c902d24da76408a470d91fc0f6a53"
+    }
+  },
+  "special_demand": {
+    "schema_version": 1,
+    "base_worker_total": 4414637,
+    "source_notes": {
+      "beaches_2023": "Municipal Tourism Yearbook 2024 revised edition, base 2023, p.15. Expanded mobile-phone visitor estimates, minimum 30-minute stay, annual sum of monthly counts. Daily trip equivalents are modeled, not measured daily trips or unique annual visitors. Locals and tourists included. Shared beach totals are split only once; residential origins proxy visitors and accommodation."
+    },
+    "special_trip_equivalents": 314835,
+    "by_category": {
+      "airports": 23494,
+      "entertainment": 206641,
+      "ferries": 3072,
+      "hospitals": 2294,
+      "parks": 4559,
+      "schools": 900,
+      "universities": 73875
+    },
+    "suggested_registry_tags": [
+      "airports",
+      "entertainment",
+      "ferries",
+      "hospitals",
+      "parks",
+      "schools",
+      "universities"
+    ],
+    "interpretation": "Additional non-work trip equivalents, not unique residents or observed employment. No new workplace employees."
+  },
+  "archive": {
+    "path": "dist/RIO.zip",
+    "bytes": 803015101
+  }
+}

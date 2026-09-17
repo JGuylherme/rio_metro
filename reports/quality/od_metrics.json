@@ -1,0 +1,15 @@
+{
+  "balanced_target": {
+    "mae": 0.0,
+    "rmse": 0.0,
+    "mape_nonzero_percent": 0.0,
+    "correlation": 1.0
+  },
+  "historical_2010_change_NOT_validation_of_2022_pairs": {
+    "mae": 1845.089352187279,
+    "rmse": 14984.434308760923,
+    "mape_nonzero_percent": 168.28584971956934,
+    "correlation": 0.9973937047171648
+  },
+  "observed_2022_pairs_available": false
+}

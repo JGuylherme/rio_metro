@@ -57,6 +57,7 @@ def main():
     mode=parser.add_mutually_exclusive_group()
     mode.add_argument('--surfaces-only',action='store_true',help='Repair water, coast and green layers, then package; reuse buildings and demand')
     mode.add_argument('--employment-only',action='store_true',help='Recalibrate jobs and workers from official benchmarks, then package; reuse geography')
+    mode.add_argument('--quality-upgrade',action='store_true',help='Run CNEFE/RAIS/PNAD and constrained municipal OD; reuse geography and census allocation')
     mode.add_argument('--package-only',action='store_true',help='Package already generated files without tests; skip map regeneration')
     parser.add_argument('--pbf',type=str,help='Local OSM regional extract, used when the extracted OSM cache is absent')
     args=parser.parse_args()
@@ -64,8 +65,8 @@ def main():
         from repair_surfaces import main as repair
         repair()
         configure()
-    elif args.employment_only:
-        from employment import main as calibrate
+    elif args.employment_only or args.quality_upgrade:
+        from quality_pipeline import main as calibrate
         calibrate()
         configure()
     elif not args.package_only:
@@ -76,6 +77,8 @@ def main():
         (OUT/'demand_data.json').unlink(missing_ok=True)
         from census_demand import generate
         generate()
+        from quality_pipeline import main as calibrate
+        calibrate(refresh_baseline=True)
         configure()
         from render_rio import run
         run()

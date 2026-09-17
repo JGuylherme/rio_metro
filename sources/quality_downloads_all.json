@@ -1,0 +1,170 @@
+{
+  "source_vintages": {
+    "cnefe": "2022, release 20240910",
+    "rais": "2024 second processing, file 20260518"
+  },
+  "files": [
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3300456.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3300456.json.zip",
+      "bytes": 6707529,
+      "sha256": "8e49caddb822b6f493f1feb66d825e2ae66c8da116006d085d4727cf80efa2d6"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3300803.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3300803.json.zip",
+      "bytes": 960770,
+      "sha256": "54dac7c95ed6fbb63093b4f95375793cd9ad9cf8b229997cd33ec363de99b855"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3301702.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3301702.json.zip",
+      "bytes": 13712208,
+      "sha256": "aa61be2f3e8356bead5e44451c3ec2c1c546a92709f889188debc128b90309a0"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3301801.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3301801.json.zip",
+      "bytes": 185052,
+      "sha256": "cfc12d4f40b0265dace55785d193c9016099cf655d8361ac0f2421dd55597d23"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3301850.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3301850.json.zip",
+      "bytes": 783680,
+      "sha256": "d379b8c23a96bda1f38eacbc031c935de4d0b63138e81a82635277b66bef1c66"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3301900.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3301900.json.zip",
+      "bytes": 3954983,
+      "sha256": "638af987c9bfc595d2dbea53c9b485ba500909bf19074a7c08689ec20f9603a9"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302007.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302007.json.zip",
+      "bytes": 1863860,
+      "sha256": "b97e85470d43d657d87270f62ddcc708f4087d2d61a67da3b96d0577be0e81f0"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302270.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302270.json.zip",
+      "bytes": 1250098,
+      "sha256": "d68652f1ed25690c3810f4b3f27f9e0b9251e8f6573fee3a2e1d96d675e42f2b"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302502.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302502.json.zip",
+      "bytes": 3749716,
+      "sha256": "c919d15b027130ad85c3acf9f83bd93ba68383e928773492a39107cc00b679ba"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302601.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302601.json.zip",
+      "bytes": 1071356,
+      "sha256": "53d6631f9c74e7c9e52a5e0ffcc99d44ceb09b13b4499ea0b657b70de718db8b"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302700.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302700.json.zip",
+      "bytes": 3676259,
+      "sha256": "4beb446d0830586ca32999b0b3b64626276b1eacd815a4c503956dc4c30dd082"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302809.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302809.json.zip",
+      "bytes": 246137,
+      "sha256": "ff3a47f5343fe24231c11def877f93bbf8bbdcf284f5fc5fbbc0aae26cda9aa8"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302858.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302858.json.zip",
+      "bytes": 1867604,
+      "sha256": "7cf27b8b987b8f7f1868e42762d5b99a8ed173ebb7b831de415d025027f9206f"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3302908.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3302908.json.zip",
+      "bytes": 398512,
+      "sha256": "06da410b1950f563046567cc133378f9637a32e1c704d78693a8e2458a582a7f"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3303203.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3303203.json.zip",
+      "bytes": 1691287,
+      "sha256": "ffacf5deaadcd6b58164e8b9d72a008752529c2ca2d72bfea3a19fddd4681417"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3303302.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3303302.json.zip",
+      "bytes": 6390728,
+      "sha256": "52c3d91e833950876b829d66e88360264fbaffbb6bbbf85703163403b5c98a72"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3303500.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3303500.json.zip",
+      "bytes": 13150282,
+      "sha256": "35c3af4a335d51d7c397d21817432fe21a87ea238c8c27a72be176b1f685ea6e"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3303609.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3303609.json.zip",
+      "bytes": 564199,
+      "sha256": "dcecc714820ff67ff4bce0e9cb4ef61dd93ae90d7e4567209ccbdbc96378275f"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3303906.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3303906.json.zip",
+      "bytes": 4300508,
+      "sha256": "455d0deffe524baf85a30550488be73ae799f9dedf1d64f882787666a9108383"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3304003.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3304003.json.zip",
+      "bytes": 402346,
+      "sha256": "d59dd92ce44ff7f3a36be3ce685c58bc88ff6a79d685174ed4bc6fe782305fb3"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3304144.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3304144.json.zip",
+      "bytes": 1929953,
+      "sha256": "4466a5128d70847980483746c256c0efc16e55341ad9ccfddbc3c9a2af44dc06"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3304409.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3304409.json.zip",
+      "bytes": 278293,
+      "sha256": "9e14c17b9dae12a8c7ef847030fd41240796d440e8e2f9d205165cff99da10b0"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3304557.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3304557.json.zip",
+      "bytes": 114520928,
+      "sha256": "38f9b39da846c72f55f9726e21ce4123d91f9d439046e09d3d4d76d7c7c59012"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3304904.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3304904.json.zip",
+      "bytes": 15588694,
+      "sha256": "e417dfebc43ce22329f6cb0cdd80784a50f752cbdaceeff5a2e587a369e7dee5"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3305109.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3305109.json.zip",
+      "bytes": 5547835,
+      "sha256": "cee45f0a2002dbca7e0caa3fd39c5431df450b9fcc79cabd25ab23c3aaf571c7"
+    },
+    {
+      "path": "data/quality_sources/cnefe/qg_810_endereco_Munic3305554.json.zip",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/GeoJSON/Municipio_20240910/qg_810_endereco_Munic3305554.json.zip",
+      "bytes": 1278139,
+      "sha256": "655b9c06cd3e153456626e23b1fbb34ffcda7cb96c63b6f3d285c143f4092944"
+    },
+    {
+      "path": "data/quality_sources/rais/RAIS_ESTAB_PUB_2024.7z",
+      "url": "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2024/RAIS_ESTAB_PUB.7z",
+      "bytes": 140661991,
+      "sha256": "f5dbd564a8c9afa4242ecd48a9a112b184e0a1a3ffa2df0ff28051057ad1a267"
+    }
+  ]
+}

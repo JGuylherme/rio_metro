@@ -10,13 +10,14 @@
         const data = await response.clone().json();
         if (!Array.isArray(data)) return response;
         const rows = data.filter(city => city.code !== 'RIO');
-        rows.push({ code: 'RIO', population: 11522312 });
+        rows.push({ code: 'RIO', population: 11491836 });
         const headers = new Headers(response.headers);
         headers.delete('content-length'); headers.delete('content-encoding');
         headers.set('content-type', 'application/json');
         return new Response(JSON.stringify(rows), { status: response.status, headers });
     };
     api.cities.registerTab({ id: 'BR', label: 'BR', emoji: '🇧🇷', cityCodes: ['RIO'] });
+    api.map.setDefaultLayerVisibility('RIO', { oceanFoundations: false });
 })();
 
 // Thin waterways and shorelines need line layers as well as water polygons.

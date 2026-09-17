@@ -36,11 +36,24 @@ def main():
     assert sum(homes.values())==sum(jobs.values())==audit['commuters']
     assert audit['neighborhood_totals_preserved']
     allocations=pd.read_csv(DATA/'census_allocation.csv')
+    assert not allocations.sector.duplicated().any()
     assert allocations.assigned_population.sum()==audit['population']
     neighborhoods=pd.read_csv(ROOT/'population_by_neighborhood.csv')
     assert neighborhoods.population.sum()==audit['population']
     assert neighborhoods[neighborhoods.municipality=='Japeri'].population.sum()>50000
     report['census']=audit;print('Census totals and commuter groups validated',flush=True)
+    quality=ROOT/'reports/quality'
+    if (quality/'summary.json').exists():
+        metadata={m['id']:m for m in json.loads((DATA/'demand_metadata.json').read_text())}
+        municipality={pid:str(m['sectors'][0])[:7] if m.get('sectors') else str(m['municipality']) for pid,m in metadata.items()}
+        actual_od=Counter()
+        for p in d['pops']:actual_od[municipality[p['residenceId']],municipality[p['jobId']]]+=p['size']
+        targets=pd.read_csv(quality/'od_municipal_targets.csv',dtype={'origin':str,'destination':str})
+        assert all(actual_od[r.origin,r.destination]==r.balanced_target for r in targets.itertuples())
+        assert sum(actual_od.values())==int(targets.balanced_target.sum())
+        capacities=pd.read_csv(quality/'workplace_capacities.csv')
+        assert all(points[r.id]['jobs']==r.target_jobs==r.actual_jobs for r in capacities.itertuples())
+        report['quality_pipeline']={'municipal_od_pairs':len(targets),'maximum_pair_error':0,'workplace_capacities_exact':True}
     for name in ['roads.geojson','runways_taxiways.geojson']:
         feats=json.loads((OUT/name).read_text())['features']
         for f in feats:
@@ -110,11 +123,17 @@ def main():
     with zipfile.ZipFile(dist/'RIO.zip') as archive:
         payload=archive.read('demand_data.json')
         released=json.loads(payload)
-        assert sum(p['residents'] for p in released['points'])==sum(p['size'] for p in released['pops'])==audit['commuters']
-        assert released['pops']==d['pops']
+        special=json.loads((dist/'special_demand_report.json').read_text())
+        assert sum(p['residents'] for p in released['points'])==sum(p['size'] for p in released['pops'])==audit['commuters']+special['special_trip_equivalents']
+        assert [p for p in released['pops'] if not p['id'].startswith('SPECIAL_')]==d['pops']
+        from release_demand import export_demand
+        assert export_demand(released)==released
+        report['special_demand']={k:v for k,v in special.items() if k!='sites'}
         report['files']['demand_data.json']={'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest()}
     report['archive']={'path':'dist/RIO.zip','bytes':(dist/'RIO.zip').stat().st_size}
     (ROOT/'validation_report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+    from package_evidence import main as package_evidence
+    package_evidence()
     print(json.dumps(report,indent=2,ensure_ascii=False),flush=True)
 
 
